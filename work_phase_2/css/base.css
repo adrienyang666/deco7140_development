@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+    color: var(--text-color); /* color applies to text */
+    background-color: var(--background-color);
+}
+body {
+    font-family: 'Nunito', sans-serif; /* new */
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+/* Typography (Using Golden Ratio) */
+h1 {
+    font-size: 4.2rem; /* 2.6 x 1.618 rounded */
+    color: var(--primary-color);
+}
+h2 {
+    font-size: 2.6rem; /* 2.6 x 1.618 rounded */
+    color: var(--primary-color);
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.6rem; /* 2.6 x 1.618 rounded */
+    color: var(--primary-color);
+    font-weight: 700;
+}

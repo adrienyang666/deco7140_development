@@ -1,0 +1,45 @@
+body {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-family: "Urbanist", sans-serif;
+}
+
+h1 {
+    font-size: 4rem; /* 32px */
+    color: black;
+    line-height: 1.5;
+}
+h2 {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-size: 3rem; /* 32px */
+    line-height: 1.5;
+}
+
+h3，h4 {
+    font-size: 1rem; /* 32px */
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.5rem; /* 16px */
+    color: rgb(3, 7, 3);
+    line-height: 1.5;
+}
+
+a {
+    font-size: 1rem; /* 32px */
+    color: black;
+    line-height: 1.5;
+}
+
+
+
+:root {
+    --color-dark: rgba(0, 0, 0, 0.305); /* 确保这个变量被定义 */
+    --color-primary: rgba(86, 86, 220, 0.386);
+    --color-secondary: rgba(74, 112, 74, 0.696);
+    --color-bright: rgb(237, 237, 164);
+}
