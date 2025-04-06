@@ -10,12 +10,36 @@
         <link rel="stylesheet" href="css/components.css" />
     </head>
     <body>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="accessibility_assessment.html">Accessibility</a>
+                </li>
+                <li><a href="client_needs_analysis.html">Client Needs</a></li>
+                <li>
+                    <a href="user_stories.html" aria-current="page"
+                        >User Stories</a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+                <li><a href="ethics_analysis.html">Ethics Analysis</a></li>
+            </ul>
+        </nav>
+
         <div class="container">
-            <header>
+            <header class="m-y-4">
                 <h2>Adrien's User Research – Food and Culinary Communities</h2>
             </header>
-            <br />
-            <section>
+
+            <section class="m-y-4">
                 <h2>Introduction</h2>
                 <p>
                     This user research was conducted using Generative AI to
@@ -25,114 +49,156 @@
                     emotional connections people form through food.
                 </p>
             </section>
-            <br />
-            <section>
-                <h2>User Stories</h2>
 
-                <div class="flip-card-container">
-                    <!-- Card 1: Nai Nai Li -->
-                    <div class="flip-card" tabindex="0">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Nai Nai Li</h3>
-                                <p><strong>Age:</strong> 68</p>
-                                <p>
-                                    <strong>Background:</strong>
-                                    Chinese-Australian grandmother living in
-                                    Brisbane
-                                </p>
-                                <p>
-                                    <strong>Need:</strong> Share traditional
-                                    recipes with her family
-                                </p>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>
-                                    <strong>Insight:</strong> Prefers voice and
-                                    visuals over long text. Emphasizes cultural
-                                    preservation.
-                                </p>
-                                <p>
-                                    <strong>User Story:</strong><br />
-                                    As a Chinese grandmother, I want to share my
-                                    recipes online so our traditions are not
-                                    lost.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Interview Card 1 -->
+            <section class="value-box m-y-4" id="nai-nai-li">
+                <h3 class="user-name">
+                    🍵 Nai Nai Li – 68, Chinese-Australian grandmother
+                </h3>
+                <p class="initial-prompt m-y-2">
+                    Prompt: Tell me about your cooking, your challenges, and how
+                    a community website could support you.
+                </p>
 
-                    <!-- Card 2: Aiden -->
-                    <div class="flip-card" tabindex="0">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Aiden</h3>
-                                <p><strong>Age:</strong> 27</p>
-                                <p>
-                                    <strong>Background:</strong>
-                                    Indian-Australian chef running pop-up events
-                                </p>
-                                <p>
-                                    <strong>Need:</strong> Share fusion recipes
-                                    and promote food events
-                                </p>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>
-                                    <strong>Insight:</strong> Wants image/video
-                                    gallery and responsive event listings.
-                                </p>
-                                <p>
-                                    <strong>User Story:</strong><br />
-                                    As a multicultural chef, I want to share
-                                    fusion recipes and events to reach more
-                                    people.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <p class="question">Q: What do you enjoy most about cooking?</p>
+                <div class="response p-x-3">
+                    <p>
+                        I love preparing the recipes passed down from my own
+                        mother.
+                        <span
+                            class="interactive-highlight-stories"
+                            data-userstory="As a Chinese grandmother, I want to share my recipes online so our traditions are not lost."
+                            >Sharing them helps me feel connected to my family
+                            and culture.</span
+                        >
+                    </p>
+                </div>
 
-                    <!-- Card 3: Emilia -->
-                    <div class="flip-card" tabindex="0">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h3>Emilia</h3>
-                                <p><strong>Age:</strong> 22</p>
-                                <p>
-                                    <strong>Background:</strong> Colombian
-                                    international student in Sydney
-                                </p>
-                                <p>
-                                    <strong>Need:</strong> Share and find
-                                    comfort food to reduce homesickness
-                                </p>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>
-                                    <strong>Insight:</strong> Needs emotional
-                                    connection, multilingual content, simple
-                                    navigation.
-                                </p>
-                                <p>
-                                    <strong>User Story:</strong><br />
-                                    As an international student, I want to find
-                                    and share traditional recipes to feel closer
-                                    to home.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <p class="question">
+                    Q: What would make it easier to share your recipes?
+                </p>
+                <div class="response p-x-3">
+                    <p>
+                        Reading and typing on a computer is hard at my age. If I
+                        could record my voice or upload pictures of handwritten
+                        notes, that would be very helpful.
+                    </p>
+                </div>
+
+                <p class="question">
+                    Q: What would you hope others get from your recipes?
+                </p>
+                <div class="response p-x-3">
+                    <p>
+                        I want younger people to understand the value behind the
+                        food. These dishes are about family and care—not just
+                        flavor.
+                    </p>
                 </div>
             </section>
 
-            <section>
-                <h2>Summary</h2>
+            <!-- Interview Card 2 -->
+            <section class="value-box m-y-4" id="aiden">
+                <h3 class="user-name">🔪 Aiden – 27, Indian-Australian chef</h3>
+                <p class="initial-prompt m-y-2">
+                    Prompt: Tell me about your cooking events and what kind of
+                    platform could help you grow your audience.
+                </p>
+
+                <p class="question">Q: What inspires your cooking?</p>
+                <div class="response p-x-3">
+                    <p>
+                        My dishes reflect my identity – part Indian heritage,
+                        part modern Australian.
+                        <span
+                            class="interactive-highlight-stories"
+                            data-userstory="As a multicultural chef, I want to share my fusion recipes and events to reach more people."
+                            >I love blending spices and styles from different
+                            cultures.</span
+                        >
+                    </p>
+                </div>
+
+                <p class="question">
+                    Q: What kind of features would help promote your events?
+                </p>
+                <div class="response p-x-3">
+                    <p>
+                        An events calendar, recipe gallery, and contact form
+                        would be amazing. I also need to easily upload photos
+                        from my phone.
+                    </p>
+                </div>
+
+                <p class="question">Q: How would this help your audience?</p>
+                <div class="response p-x-3">
+                    <p>
+                        It would give people a way to connect with me beyond the
+                        food – to understand the meaning behind what I cook.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Interview Card 3 -->
+            <section class="value-box m-y-4" id="emilia">
+                <h3 class="user-name">
+                    🎒 Emilia – 22, Colombian international student
+                </h3>
+                <p class="initial-prompt m-y-2">
+                    Prompt: Tell me about food from your home and how you
+                    experience cooking as a student in Australia.
+                </p>
+
+                <p class="question">
+                    Q: What role does food play for you while living abroad?
+                </p>
+                <div class="response p-x-3">
+                    <p>
+                        It’s emotional.
+                        <span
+                            class="interactive-highlight-stories"
+                            data-userstory="As an international student, I want to find and share traditional recipes to feel closer to home."
+                            >Making arepas brings back memories of my
+                            grandmother and Colombia.</span
+                        >
+                    </p>
+                </div>
+
+                <p class="question">
+                    Q: What kind of online features would be useful?
+                </p>
+                <div class="response p-x-3">
+                    <p>
+                        Recipe translation, community posts from other Latinx
+                        students, and an option to record short stories with
+                        each recipe would be awesome.
+                    </p>
+                </div>
+
+                <p class="question">
+                    Q: What kind of community would you hope to find?
+                </p>
+                <div class="response p-x-3">
+                    <p>
+                        People who care about food like I do, who want to talk
+                        about culture, not just cooking steps.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Summary -->
+            <section class="value-box m-y-5 p-x-3">
+                <h3>📌 Summary</h3>
                 <p>
-                    These personas highlight the importance of intergenerational
-                    storytelling, cultural preservation, emotional comfort, and
-                    accessible digital features in food-related web experiences.
+                    These user stories highlight intergenerational knowledge
+                    sharing, cultural pride, emotional connection, and a need
+                    for accessible and multilingual tools. Design decisions will
+                    be informed by the goals and pain points revealed in these
+                    interviews.
                 </p>
             </section>
         </div>
+
+        <script type="module" src="js/user.js"></script>
     </body>
 </html>

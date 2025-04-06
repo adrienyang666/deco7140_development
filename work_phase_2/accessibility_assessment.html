@@ -8,30 +8,64 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <style>
+            a[href^="http"] {
+                font-weight: bold;
+                color: var(--accent-color, #e91e63);
+                text-decoration: underline;
+            }
+        </style>
     </head>
     <body>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="accessibility_assessment.html" aria-current="page"
+                        >Accessibility</a
+                    >
+                </li>
+                <li><a href="client_needs_analysis.html">Client Needs</a></li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+                <li><a href="ethics_analysis.html">Ethics Analysis</a></li>
+            </ul>
+        </nav>
+
         <div class="container">
-            <header>
+            <header class="m-y-4">
                 <h2>
                     Accessibility Assessment – Food and Culinary Communities
                 </h2>
             </header>
 
-            <section>
+            <section class="m-y-4">
                 <div class="value-box">
                     <h3>Overview</h3>
                     <p>
                         This assessment identifies key accessibility
-                        considerations for the proposed website, using the WCAG
-                        2.2 Level AA guidelines. The aim is to ensure the
-                        website is inclusive, usable, and accessible to all
-                        users, including those with visual, auditory, cognitive,
-                        and physical impairments.
+                        considerations for the proposed website, using the
+                        <a
+                            href="https://www.w3.org/WAI/WCAG22/quickref/"
+                            target="_blank"
+                            >WCAG 2.2 Level AA</a
+                        >
+                        guidelines. The aim is to ensure the website is
+                        inclusive, usable, and accessible to all users,
+                        including those with visual, auditory, cognitive, and
+                        physical impairments.
                     </p>
                 </div>
             </section>
 
-            <section>
+            <section class="m-y-4">
                 <div class="value-box">
                     <h3>Key Accessibility Features</h3>
                     <ul>
@@ -74,7 +108,7 @@
                 </div>
             </section>
 
-            <section>
+            <section class="m-y-4">
                 <div class="value-box">
                     <h3>Connection to User Research</h3>
                     <p>
@@ -89,22 +123,33 @@
                 </div>
             </section>
 
-            <section>
+            <section class="m-y-4">
                 <div class="value-box">
                     <h3>Standards and References</h3>
                     <p>
-                        This website follows
+                        This website follows the
                         <a
                             href="https://www.w3.org/WAI/WCAG22/quickref/"
                             target="_blank"
-                            >WCAG 2.2 Level AA</a
+                            >WCAG 2.2 Level AA Guidelines</a
                         >
-                        accessibility standards. Design practices also align
-                        with ethical expectations outlined in the Australian
-                        Computing Society’s Code of Ethics.
+                        published by the W3C Web Accessibility Initiative. These
+                        standards ensure compatibility with assistive
+                        technologies and inclusive practices across all devices.
+                    </p>
+                    <p>
+                        Additional guidance is aligned with ethical expectations
+                        outlined in the
+                        <a
+                            href="https://www.acs.org.au/content/dam/acs/rules-and-regulations/Code-of-Professional-Conduct_v2.1.pdf"
+                            target="_blank"
+                            >Australian Computing Society’s Code of Ethics</a
+                        >.
                     </p>
                 </div>
             </section>
         </div>
+
+        <script type="module" src="js/accessibility.js"></script>
     </body>
 </html>

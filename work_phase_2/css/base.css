@@ -23,3 +23,36 @@ h3 {
     color: var(--primary-color);
     font-weight: 700;
 }
+/* ✨ Section & Paragraph Spacing Enhancements */
+section {
+    margin-bottom: 2.5rem; /* add spacing between sections */
+  }
+  
+  section h2,
+  section h3 {
+    margin-bottom: 1.2rem; /* space below headings */
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+    font-size: 1.05rem;
+  }
+  
+  /* Optional: Improve spacing in lists */
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Add breathing room to header/nav/summary */
+  header,
+  nav,
+  summary {
+    margin-bottom: 2rem;
+  }
+  
