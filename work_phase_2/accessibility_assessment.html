@@ -14,6 +14,34 @@
                 color: var(--accent-color, #e91e63);
                 text-decoration: underline;
             }
+            .accessibility-cards {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 1rem 0;
+            }
+            @media (min-width: 768px) {
+                .accessibility-cards {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            .accessibility-item {
+                background-color: #f9f9f9;
+                border-left: 5px solid var(--primary-color);
+                padding: 1.2rem 1rem;
+                border-radius: 8px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+            }
+            .accessibility-item h4 {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+                font-weight: 700;
+                color: var(--primary-color);
+            }
+            .accessibility-item p {
+                font-size: 0.98rem;
+                line-height: 1.6;
+            }
         </style>
     </head>
     <body>
@@ -41,9 +69,7 @@
 
         <div class="container">
             <header class="m-y-4">
-                <h2>
-                    Accessibility Assessment – Food and Culinary Communities
-                </h2>
+                <h2>Accessibility Assessment</h2>
             </header>
 
             <section class="m-y-4">
@@ -68,43 +94,56 @@
             <section class="m-y-4">
                 <div class="value-box">
                     <h3>Key Accessibility Features</h3>
-                    <ul>
-                        <li>
-                            <strong>High Contrast & Readable Fonts:</strong> All
-                            text uses accessible contrast ratios and legible,
-                            sans-serif fonts to support users with low vision.
-                        </li>
-                        <li>
-                            <strong>Scalable Text:</strong> Font sizes are
-                            responsive and allow user zooming without breaking
-                            layout.
-                        </li>
-                        <li>
-                            <strong>Alt Text for Images:</strong> All food
-                            images and recipe visuals include meaningful
-                            alternative text for screen readers.
-                        </li>
-                        <li>
-                            <strong>Keyboard Navigation:</strong> Interactive
-                            elements such as flip cards and buttons are fully
-                            navigable via keyboard (e.g. tab/enter keys).
-                        </li>
-                        <li>
-                            <strong>Multilingual Support:</strong> Language
-                            toggle allows users to access recipe content in
-                            different languages (e.g., English and Spanish).
-                        </li>
-                        <li>
-                            <strong>Transcripts and Captions:</strong> All audio
-                            or video-based cooking tutorials include written
-                            transcripts and captions for hearing-impaired users.
-                        </li>
-                        <li>
-                            <strong>Clear Layout:</strong> Content is structured
-                            with logical headings, short paragraphs, and clear
-                            labels to reduce cognitive load.
-                        </li>
-                    </ul>
+                    <div class="accessibility-cards">
+                        <div class="accessibility-item">
+                            <h4>High Contrast & Readable Fonts</h4>
+                            <p>
+                                All text uses accessible contrast ratios and
+                                legible, sans-serif fonts to support users with
+                                low vision.
+                            </p>
+                        </div>
+                        <div class="accessibility-item">
+                            <h4>Scalable Text</h4>
+                            <p>
+                                Font sizes are responsive and allow user zooming
+                                without breaking layout.
+                            </p>
+                        </div>
+
+                        <div class="accessibility-item">
+                            <h4>Keyboard Navigation</h4>
+                            <p>
+                                Interactive elements such as flip cards and
+                                buttons are fully navigable via keyboard (e.g.
+                                tab/enter keys).
+                            </p>
+                        </div>
+                        <div class="accessibility-item">
+                            <h4>Multilingual Support</h4>
+                            <p>
+                                Language toggle allows users to access recipe
+                                content in different languages (e.g., English
+                                and Spanish).
+                            </p>
+                        </div>
+                        <div class="accessibility-item">
+                            <h4>Transcripts and Captions</h4>
+                            <p>
+                                All audio or video-based cooking tutorials
+                                include written transcripts and captions for
+                                hearing-impaired users.
+                            </p>
+                        </div>
+                        <div class="accessibility-item">
+                            <h4>Clear Layout</h4>
+                            <p>
+                                Content is structured with logical headings,
+                                short paragraphs, and clear labels to reduce
+                                cognitive load.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 

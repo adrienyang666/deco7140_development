@@ -31,6 +31,7 @@
     border-radius: 10%; /* Creates rounded corners */
     opacity: 0; /* Initially hides the tooltip */
     transition: opacity 0.3s ease; /* Smoothly fades in the tooltip by changing the opacity */
+    z-index: 1; /* ✅ 添加这行，提升层级，避免菜单遮住 */
 }
 /* Show Number on Hover (Desktop) */
 @media (hover: hover) {
@@ -183,6 +184,11 @@
     align-items: center;
     position: relative;
 }
+.navbar,
+.menu {
+    position: relative;
+    z-index: 10;
+}
 
 /* MENU (Mobile First) */
 .menu {
@@ -246,9 +252,9 @@
     padding: 2px 5px;
     border-radius: 4px;
     transition: background 0.3s ease;
-  }
-  
-  .interactive-highlight-stories::after {
+}
+
+.interactive-highlight-stories::after {
     content: attr(data-userstory);
     position: absolute;
     top: -10px;
@@ -266,21 +272,21 @@
     pointer-events: none;
     z-index: 10;
     transition: opacity 0.3s ease;
-  }
-  
-  /* Show tooltip on hover (desktop) */
-  @media (hover: hover) {
+}
+
+/* Show tooltip on hover (desktop) */
+@media (hover: hover) {
     .interactive-highlight-stories:hover::after {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  /* Show tooltip on focus/tap (mobile) */
-  .interactive-highlight-stories:focus::after,
-  .interactive-highlight-stories:active::after {
+}
+
+/* Show tooltip on focus/tap (mobile) */
+.interactive-highlight-stories:focus::after,
+.interactive-highlight-stories:active::after {
     opacity: 1;
-  }
-  /* using an emoji for a bullet point (marker) */
+}
+/* using an emoji for a bullet point (marker) */
 .interview ul li::marker {
     content: "🥕";
     font-size: 1.5em;
@@ -290,5 +296,9 @@
 .response {
     border-left: 2px solid var(--secondary-color);
     font-style: italic;
-    background-color: color-mix(in srgb, var(--secondary-color) 10%, transparent); /* color variable transparency */
+    background-color: color-mix(
+        in srgb,
+        var(--secondary-color) 10%,
+        transparent
+    ); /* color variable transparency */
 }

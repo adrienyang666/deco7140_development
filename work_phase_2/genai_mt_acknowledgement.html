@@ -8,6 +8,28 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <style>
+            .checklist-group {
+                margin-bottom: 2rem;
+                background-color: #f9f9f9;
+                border-left: 4px solid var(--primary-color);
+                padding: 1rem 1.25rem;
+                border-radius: 8px;
+            }
+            .checklist-group h4 {
+                color: var(--primary-color);
+                margin-bottom: 0.5rem;
+                font-size: 1.15rem;
+                font-weight: 700;
+                border-bottom: 1px solid var(--primary-color);
+                padding-bottom: 0.25rem;
+            }
+            .checklist-group p {
+                margin-left: 0.25rem;
+                line-height: 1.6;
+                font-size: 1rem;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar">
@@ -15,107 +37,159 @@
                 ☰
             </button>
             <ul class="menu">
-                <li><a href="index.html" aria-current="home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li>
-                    <a href="accessibility_assessment.html" aria-current="home"
-                        >accessibility</a
+                    <a href="accessibility_assessment.html">Accessibility</a>
+                </li>
+                <li><a href="client_needs_analysis.html">Client Needs</a></li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html" aria-current="page"
+                        >GenAI Acknowledgement</a
                     >
                 </li>
-                <li>
-                    <a href="client_needs_analysis.html" aria-current="home"
-                        >client_needs</a
-                    >
-                </li>
-                <li>
-                    <a href="user_stories.html" aria-current="home"
-                        >user_stories</a
-                    >
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html" aria-current="home"
-                        >genai_mt_acknowledgement</a
-                    >
-                </li>
-                <li>
-                    <a href="ethics_analysis.html" aria-current="home"
-                        >ethics_analysis</a
-                    >
-                </li>
-                <!-- add links to the rest of your pages here -->
+                <li><a href="ethics_analysis.html">Ethics Analysis</a></li>
             </ul>
         </nav>
+
         <div class="container">
-            <header>
-                <h2>GenAI and Machine Translation Acknowledgement</h2>
+            <header class="m-y-4">
+                <h2>GenAI and MT Acknowledgement</h2>
             </header>
 
-            <section>
-                <div class="value-box">
-                    <h3>1. Tools Used</h3>
+            <section class="m-y-4 value-box">
+                <h3>Context</h3>
+                <p>
+                    This assessment involved creating a multi-page user research
+                    and analysis website for the Food and Culinary Communities
+                    project. I used ChatGPT to assist in generating interview
+                    prompts and responses, summarising user insights into user
+                    stories, and producing HTML and CSS snippets. Grammarly was
+                    also used to refine the grammar of written reflections.
+                </p>
+            </section>
+
+            <section class="m-y-4 value-box">
+                <h3>GenAI Tool Usage Breakdown</h3>
+                <ul>
+                    <li>
+                        <strong>User Research:</strong> Used ChatGPT to simulate
+                        realistic interviews with diverse personas.
+                    </li>
+                    <li>
+                        <strong>User Story Development:</strong> Generated and
+                        refined user stories from interview responses using AI.
+                    </li>
+                    <li>
+                        <strong>HTML & CSS Code:</strong> ChatGPT assisted with
+                        HTML layout structure, flip cards, navigation, and
+                        responsive helper classes.
+                    </li>
+                    <li>
+                        <strong>Design Interactions:</strong> Supported
+                        hover/focus accessibility behavior and interactive
+                        highlights for user stories.
+                    </li>
+                    <li>
+                        <strong>Writing & Editing:</strong> Grammarly checked
+                        grammar and readability. ChatGPT refined reflection and
+                        instruction-following text.
+                    </li>
+                    <li>
+                        <strong>Prompt Iteration:</strong> Prompts were tested
+                        and refined to avoid biased or overly generic results
+                        and improve relevance.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="m-y-4 value-box">
+                <h3>Checklist Application</h3>
+
+                <div class="checklist-group">
+                    <h4>Rules and Boundaries</h4>
                     <p>
-                        I used Generative AI (ChatGPT) to support content
-                        generation for the five project pages in Work Phase 2.
-                        AI was used to simulate user interviews, draft content
-                        structures, check grammar, and suggest phrasing. I also
-                        used DeepL and Google Translate to assist in translating
-                        certain sections for bilingual drafts.
+                        I checked the assessment task sheet and the ECP to
+                        confirm that the use of GenAI tools was permitted for
+                        user research and design support. I ensured all
+                        generated content was critically reviewed and modified.
+                    </p>
+                </div>
+
+                <div class="checklist-group">
+                    <h4>Tool Selection</h4>
+                    <p>
+                        I chose ChatGPT for its conversational capabilities and
+                        idea generation, and Grammarly for proofreading. These
+                        tools supported my design thinking while allowing space
+                        for personal input and learning.
+                    </p>
+                </div>
+
+                <div class="checklist-group">
+                    <h4>Privacy Considerations</h4>
+                    <p>
+                        I did not include any personal or sensitive data in my
+                        prompts. Personas used were fictional and AI-generated.
+                    </p>
+                </div>
+
+                <div class="checklist-group">
+                    <h4>Reviewing and Verifying Content</h4>
+                    <p>
+                        I reviewed all generated outputs to ensure accuracy and
+                        coherence. HTML was tested and edited, while user
+                        stories were revised for clarity and specificity.
+                    </p>
+                </div>
+
+                <div class="checklist-group">
+                    <h4>Ethical Considerations</h4>
+                    <p>
+                        I ensured all text was inclusive and free of cultural or
+                        gender bias. Prompts were refined to avoid stereotypical
+                        outputs.
+                    </p>
+                </div>
+
+                <div class="checklist-group">
+                    <h4>Acknowledgment and Attribution</h4>
+                    <p>
+                        This page documents my use of AI tools. Comments were
+                        added in code where relevant to indicate AI-supported
+                        sections.
                     </p>
                 </div>
             </section>
 
-            <section>
-                <div class="value-box">
-                    <h3>2. Modification and Critical Engagement</h3>
-                    <p>
-                        All AI-generated or translated content was carefully
-                        reviewed, edited, and restructured by me. I ensured that
-                        outputs aligned with the assignment requirements and
-                        reflected my own design decisions and understanding. No
-                        AI content was used “as-is” without thoughtful
-                        modification.
-                    </p>
-                </div>
+            <section class="m-y-4 value-box">
+                <h3>Reflection</h3>
+                <p>
+                    Using GenAI tools helped accelerate the ideation phase and
+                    gave me new ways to think about diverse user needs. However,
+                    I encountered limitations such as generic or biased content,
+                    which required multiple iterations and critical engagement.
+                    Through this process, I learned to refine prompts and
+                    interpret responses rather than accept outputs at face
+                    value. Next time, I will plan more time for prompt testing
+                    and explore multiple tools to triangulate better insights.
+                    Reviewing and revising AI outputs improved my confidence in
+                    both content generation and ethical web design.
+                </p>
             </section>
 
-            <section>
-                <div class="value-box">
-                    <h3>3. Benefits</h3>
-                    <p>
-                        These tools helped me save time, overcome language
-                        barriers, and explore more precise ways to express
-                        ideas. They were especially helpful when brainstorming
-                        user personas, writing accessible descriptions, and
-                        generating ethical language.
-                    </p>
-                </div>
-            </section>
-
-            <section>
-                <div class="value-box">
-                    <h3>4. Risks and Ethical Reflection</h3>
-                    <p>
-                        I am aware that AI-generated content can contain bias,
-                        inaccuracies, or generic ideas. Relying too much on
-                        these tools without critical thinking could result in
-                        unoriginal work or academic integrity issues. I used
-                        them responsibly, with proper editing and reflection.
-                    </p>
-                </div>
-            </section>
-
-            <section>
-                <div class="value-box">
-                    <h3>5. Transparency and Academic Integrity</h3>
-                    <p>
-                        This page serves as a full declaration of how I used
-                        GenAI and MT tools. I confirm that I complied with the
-                        course’s academic integrity guidelines and did not use
-                        any AI tools for unauthorised assistance or plagiarism.
-                    </p>
-                </div>
+            <section class="m-y-4 value-box">
+                <h3>Integrity Statement</h3>
+                <p>
+                    I used GenAI tools as a supplement to my own design and
+                    research efforts. All AI-generated content was carefully
+                    reviewed, edited, and integrated to align with academic
+                    expectations. This acknowledgement ensures transparency and
+                    supports my learning, while maintaining the integrity of
+                    this assessment task.
+                </p>
             </section>
         </div>
+        <script type="module" src="js/genai.js"></script>
     </body>
-    <!-- Linking External JavaScript -->
-    <script type="module" src="js/genai.js"></script>
 </html>

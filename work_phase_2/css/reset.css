@@ -1,72 +1,152 @@
 /* CSS Reset File – Complete Blank Slate */
 
 /* 1. Set box-sizing globally */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin, padding, border */
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed, 
-  figure, figcaption, footer, header, hgroup, 
-  main, menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+}
+
+/* 2. Remove default margin, padding, border */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-  }
-  
-  /* 3. Remove list styles */
-  ol, ul {
+}
+
+/* 3. Remove list styles */
+ol,
+ul {
     list-style: none;
-  }
-  
-  /* 4. Remove quotes from blockquotes and q */
-  blockquote, q {
+}
+
+/* 4. Remove quotes from blockquotes and q */
+blockquote,
+q {
     quotes: none;
-  }
-  blockquote::before, blockquote::after,
-  q::before, q::after {
-    content: '';
-  }
-  
-  /* 5. Reset table borders and spacing */
-  table {
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+}
+
+/* 5. Reset table borders and spacing */
+table {
     border-collapse: collapse;
     border-spacing: 0;
-  }
-  
-  /* 6. Remove text decoration and background on links */
-  a {
+}
+
+/* 6. Remove text decoration and background on links */
+a {
     text-decoration: none;
     color: inherit;
     background: transparent;
-  }
-  
-  /* 7. Remove outlines */
-  :focus {
+}
+
+/* 7. Remove outlines */
+:focus {
     outline: none;
-  }
-  
-  /* 8. Reset animations and transitions */
-  * {
+}
+
+/* 8. Reset animations and transitions */
+* {
     animation: none !important;
-    transition: none !important;
-  }
-  
-  /* 9. Reset form elements */
-  button, input, select, textarea {
+    transition: none;
+    transform: none;
+    will-change: auto;
+}
+
+/* 9. Reset form elements */
+button,
+input,
+select,
+textarea {
     font: inherit;
     color: inherit;
     background: none;
@@ -75,10 +155,9 @@
     margin: 0;
     appearance: none;
     box-shadow: none;
-  }
-  
-  /* 10. Set base line-height */
-  body {
+}
+
+/* 10. Set base line-height */
+body {
     line-height: 1;
-  }
-  
+}
