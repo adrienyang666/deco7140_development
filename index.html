@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- iPhone -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ADRIEN YANG</title>
+
+        <!-- Favicons -->
         <link
             rel="apple-touch-icon"
             sizes="60x60"
@@ -17,7 +21,6 @@
             sizes="180x180"
             href="pwa_icons/ios/180.png"
         />
-        <!-- iPad -->
         <link
             rel="apple-touch-icon"
             sizes="76x76"
@@ -28,13 +31,11 @@
             sizes="152x152"
             href="pwa_icons/ios/152.png"
         />
-        <!-- iPad Pro -->
         <link
             rel="apple-touch-icon"
             sizes="167x167"
             href="pwa_icons/ios/167.png"
         />
-        <!-- Standard favicons -->
         <link
             rel="icon"
             type="image/png"
@@ -47,27 +48,94 @@
             sizes="32x32"
             href="pwa_icons/ios/32.png"
         />
-
         <link rel="manifest" href="/manifest.json" />
 
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ADRIEN YANG</title>
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <style>
+            .hero {
+                text-align: center;
+                margin-top: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+                color: var(--primary-color);
+                margin-bottom: 0.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                color: var(--text-color);
+                margin-bottom: 2rem;
+            }
+
+            .work-links {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 1.5rem;
+                padding: 2rem 1rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .work-card {
+                background-color: #fff;
+                border: 2px solid var(--primary-color);
+                border-radius: 12px;
+                padding: 1.5rem;
+                text-align: center;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .work-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            }
+
+            .work-card a {
+                font-size: 1.1rem;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: 600;
+            }
+        </style>
     </head>
     <body>
-        <h1>ADI's Home Page</h1>
-        <article>
-            <h2>About Me</h2>
-            <p>
-                Adrien, a currently student in australia, passinate about
-                innovative design solutions
-            </p>
-            <h3>links to my work phase pages</h3>
-            <a href="work_phase_1/index.html">Work Phase 1</a>
-            <a href="work_phase_2/index.html">Work Phase 2</a>
-            <a href="work_phase_3/index.html">Work Phase 3</a>
-            <a href="work_phase_4/index.html">Work Phase 4</a>
-        </article>
+        <div class="container">
+            <section class="hero">
+                <h1>👋 Hi, I'm Adrien Yang</h1>
+                <p>
+                    A student in Australia passionate about inclusive, ethical,
+                    and accessible design.
+                </p>
+            </section>
+
+            <section>
+                <h2 style="text-align: center">My Work Phase Pages</h2>
+                <div class="work-links">
+                    <div class="work-card">
+                        <a href="work_phase_1/index.html">Work Phase 1</a>
+                    </div>
+                    <div class="work-card">
+                        <a href="work_phase_2/index.html">Work Phase 2</a>
+                    </div>
+                    <div class="work-card">
+                        <a href="work_phase_3/index.html">Work Phase 3</a>
+                    </div>
+                    <div class="work-card">
+                        <a href="work_phase_4/index.html">Work Phase 4</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
         <script>
             if ("serviceWorker" in navigator) {
                 navigator.serviceWorker
