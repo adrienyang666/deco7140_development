@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Google Font: Poppins -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <title>Style Guide</title>
+    </head>
+    <body>
+        <!-- START PAGE STRUCTURE -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        ><span class="icon">🎨</span></a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li><a href="site_map.html">Site Map</a></li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        >Style Guide</a
+                    >
+                </li>
+                <li><a href="ethical_response.html">Ethical Response</a></li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+                <header class="m-y-3 style-guide-header">
+                    <h1 class="page-title">STYLE GUIDE</h1>
+                    <nav class="design-layers-nav m-t-1">
+                        <strong>Explore Layers:</strong>
+                        <a href="visceral_design.html">👁️ Visceral</a> |
+                        <a href="behavioural_design.html">🧠 Behavioural</a> |
+                        <a href="reflective_design.html">🪞 Reflective</a>
+                    </nav>
+                </header>
+
+                <p class="hero-text m-y-2">
+                    This page showcases core design components used in the Youth
+                    Engagement website, including layout, color palette, and
+                    typography.
+                </p>
+                <!-- Typography Section -->
+                <section class="m-y-5">
+                    <h2>Typography</h2>
+                    <p>
+                        We use the <strong>Poppins</strong> font family in 400,
+                        600, and 700 weights to ensure clarity and hierarchy.
+                        The font is clean, modern, and supports multilingual
+                        readability. Font sizes are responsive and follow a
+                        modular scale.
+                    </p>
+                    <ul>
+                        <li><code>h1</code> - 2rem, bold</li>
+                        <li><code>h2</code> - 1.5rem, semi-bold</li>
+                        <li><code>p</code> - 1rem, regular</li>
+                    </ul>
+                    <p>
+                        <strong>Accessibility Note:</strong> Fonts meet WCAG
+                        3.1.1 readability level, and sufficient size is used for
+                        body text (16px+).
+                    </p>
+                    <img
+                        src="assets/typography_demo.png"
+                        alt="Typography sample showing Poppins font in h1, h2, and paragraph styles"
+                        class="img-fluid"
+                    />
+                </section>
+
+                <!-- Color Palette Section -->
+                <section class="m-y-5">
+                    <h2>Color Palette</h2>
+                    <div class="color-swatch-grid">
+                        <div class="swatch" style="background: #2d6cdf">
+                            Primary: #2D6CDF
+                        </div>
+                        <div
+                            class="swatch"
+                            style="background: #f9f9f9; color: #333"
+                        >
+                            Secondary: #F9F9F9
+                        </div>
+                        <div class="swatch" style="background: #ff6b6b">
+                            Accent: #FF6B6B
+                        </div>
+                    </div>
+                    <p>
+                        Primary blue (#2D6CDF) is used for headings and key
+                        CTAs. Accent red (#FF6B6B) signals interaction.
+                        Background white and light grey improve contrast.
+                    </p>
+                    <p>
+                        <strong>Accessibility Note:</strong> Text over colors
+                        maintains a contrast ratio of 4.5:1+ (checked via WebAIM
+                        tools).
+                    </p>
+                </section>
+
+                <!-- Layout and Spacing Section -->
+                <section class="m-y-5">
+                    <h2>Layout & Spacing</h2>
+                    <img
+                        src="assets/layout_spacing_mockup.png"
+                        alt="A visual diagram showing mobile-first layout using Flexbox with spacing utilities like .m-y-2 and .p-x-3"
+                        class="img-fluid"
+                    />
+                    <p>
+                        Layout is designed mobile-first using Flexbox. Spacing
+                        utilities like <code>.m-y-2</code> and
+                        <code>.p-x-3</code> help maintain consistent rhythm and
+                        readable visual hierarchy.
+                    </p>
+                    <ul>
+                        <li><code>.m-y-2</code> → 1rem vertical margin</li>
+                        <li><code>.p-x-3</code> → 1.5rem horizontal padding</li>
+                    </ul>
+                    <p>
+                        <strong>Accessibility Note:</strong> Adequate spacing
+                        improves readability and tap target separation (WCAG
+                        2.5.5).
+                    </p>
+                </section>
+
+                <!-- UI Components Section -->
+                <section class="m-y-5">
+                    <h2>UI Components</h2>
+
+                    <h3>Button</h3>
+                    <button class="btn">Primary Button</button>
+                    <p>
+                        <strong>Accessibility Note:</strong> Buttons have
+                        visible focus states and clear labels.
+                        <code>&lt;button&gt;</code> is used instead of
+                        <code>&lt;div&gt;</code>.
+                    </p>
+
+                    <h3>Form Example</h3>
+                    <form>
+                        <label for="email">Email Address</label>
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="you@example.com"
+                        />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p>
+                        <strong>Accessibility Note:</strong> Forms use explicit
+                        labels and ARIA attributes where needed (WCAG 3.3.2).
+                    </p>
+                </section>
+
+                <!-- Image Usage Section -->
+                <section class="m-y-5">
+                    <h2>Image Usage</h2>
+                    <img
+                        src="assets/garden_comic_style.png"
+                        alt="A young person tending to a garden bed"
+                        class="img-fluid"
+                    />
+                    <p>
+                        Images are used to emotionally connect with users. Every
+                        image includes descriptive <code>alt</code> text to
+                        ensure compatibility with screen readers.
+                    </p>
+                    <p>
+                        <strong>Accessibility Note:</strong> Meets WCAG 1.1.1
+                        non-text content requirement.
+                    </p>
+                </section>
+
+                <!-- Card Section -->
+                <section class="card-container">
+                    <div class="card">
+                        <h3>Typography</h3>
+                        <p>
+                            We use the Poppins font family across all pages with
+                            400, 600, and 700 weights.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Color Palette</h3>
+                        <p>
+                            Primary: #2D6CDF, Secondary: #F9F9F9, Accent:
+                            #FF6B6B.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Layout Strategy</h3>
+                        <p>
+                            Mobile-first layout using flexbox with spacing
+                            helpers like .m-y-2 and .p-x-3.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- JavaScript -->
+        <script type="module" src="js/style_guide.js"></script>
+        <!-- END PAGE STRUCTURE -->
+    </body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #2A7F62;
+    --secondary-color: #F9F9F9;
+    --accent-color: #F2C14E;
+    --text-color: #333333;
+    --bg-color: #f4f4f4;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Desktop override */
+@media (min-width: 768px) {
+    .page-title {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+}
+/* === FOCUS INDICATOR 强化 === */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+.btn:focus,
+.btn-icon:focus,
+.focus-visible {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+    scroll-margin-top: 64px; /* 确保焦点元素不会被 sticky header 遮住 */
+}
+
+/* === Form Field Accessibility === */
+input,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #333;
+    background-color: #fdfdfd;
+}
+
+/* === Error Message Styling (Not color-only) === */
+.error {
+    color: red;
+    font-weight: bold;
+    border-left: 4px solid red;
+    padding-left: 0.75rem;
+    margin-top: 0.5rem;
+}
+/* === Unified Navigation Link Styling === */
+#nav-desktop ul li a,
+#nav-mobile ul li a {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  min-width: 100px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+#nav-desktop ul li,
+#nav-mobile ul li {
+  list-style: none;
+}
+#nav-desktop a,
+#nav-mobile a {
+  font-family: 'Poppins', sans-serif;  /* 或你自己的主字体 */
+  font-weight: 500;                     /* 中等粗细，统一全站 */
+  font-size: 1rem;
+  color: #222;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+#nav-desktop a[aria-current="page"],
+#nav-mobile a[aria-current="page"] {
+  color: #2d6cdf;
+  text-decoration: underline; /* 可以保留视觉提示，但避免 font-weight 差异 */
+  font-weight: 500;
+}

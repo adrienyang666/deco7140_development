@@ -1,0 +1,139 @@
+/* style_guide.css */
+/* Style Guide – page-specific styles */
+
+/* Card container styles */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Card styles - mobile default */
+.card {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Hover animation */
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(33.33% - 14px); /* Approx. 3 cards per row with gap */
+        margin-bottom: 20px;
+    }
+}
+.color-swatch-grid {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.swatch {
+    flex: 1;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+}
+/* Style Guide Header Navigation */
+.style-guide-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.design-layers-nav {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.design-layers-nav a {
+    color: var(--accent-color, #2d6cdf);
+    text-decoration: underline;
+    margin-right: 0.75rem;
+    transition: color 0.3s;
+}
+
+.design-layers-nav a:hover {
+    color: #ff6b6b;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .top-text-nav {
+    background-color: #f9f9f9;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+}
+
+.top-text-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.top-text-nav li a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.top-text-nav li a:hover,
+.top-text-nav li a:focus {
+    color: #2d6cdf;
+    text-decoration: underline;
+}
+.top-text-nav {
+    background-color: white;
+    padding: 1rem 2rem;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-text-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-text-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.top-text-nav a:hover {
+    color: #2d6cdf;
+    text-decoration: underline;
+}

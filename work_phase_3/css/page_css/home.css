@@ -1,0 +1,180 @@
+/* === HOMEPAGE LAYOUT === */
+
+.hero-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f0f4ff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    color: #2d6cdf;
+    margin-bottom: 1rem;
+}
+
+.hero-section .hero-text {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* === Welcome Section === */
+.welcome blockquote {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d6cdf;
+    border-left: 5px solid #2d6cdf;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.welcome p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* === Card Grid Section === */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .card {
+    flex: 1 1 260px;
+    max-width: 300px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    min-height: 200px;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    color: #2d6cdf;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+
+/* === Work Phase Button Grid === */
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button-grid .btn {
+    padding: 0.8rem 1.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: #2d6cdf;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-grid .btn:hover {
+    background-color: #1b4fa8;
+}
+
+/* === Feature List === */
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.feature-list li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+/* === Responsive Media Queries === */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.hero-highlight {
+    background-color: #fff8c4;
+    border: 3px solid #2d6cdf;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 4px 4px 0px #2d6cdf;
+    text-align: center;
+  }
+  
+  /* 小漫画风动效：淡入+上浮 */
+  @keyframes popFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .animate-pop {
+    animation: popFadeIn 0.6s ease-out both;
+  }
+  

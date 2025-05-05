@@ -1,0 +1,134 @@
+/* === Page Layout & Typography === */
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color, #2d6cdf);
+  }
+  
+  section {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    color: #2d6cdf;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* === Navigation Fix: Remove Checkmarks from Nav === */
+  nav li::before,
+  #nav-mobile li::before,
+  #nav-desktop li::before {
+    content: none !important;
+  }
+  
+  /* === Container === */
+  .container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* === General Card Style === */
+  .card {
+    background-color: #f9f9ff;
+    border: 2px solid #2d6cdf;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card h2 {
+    color: #2d6cdf;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .ack-note {
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  /* === Card Grid Layout === */
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+    box-sizing: border-box;
+  }
+  
+  /* Cards inside a grid: use flex for equal layout */
+  .card.flex-card {
+    flex: 1 1 calc(50% - 2rem);
+    min-width: 300px;
+    max-width: 500px;
+    background-color: #f9f9ff;
+    border: 2px solid #2d6cdf;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+  
+  .card.flex-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* === Checklist Style === */
+  ul.styled-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  ul.styled-list li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  ul.styled-list li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    font-size: 1.2rem;
+    color: #2a7f62;
+  }
+  

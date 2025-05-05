@@ -1,0 +1,205 @@
+/* === Reset & Base === */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: rgb(235, 198, 216);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+/* === Headings === */
+h1.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d6cdf;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #2d6cdf;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* === Sections === */
+section {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* === Table: Values Mapping === */
+.values-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    border: 2px solid #2d6cdf;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.values-table th,
+.values-table td {
+    border: 1px solid #888;
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+    word-break: break-word;
+}
+
+.values-table th {
+    background-color: #e9f1ff;
+    color: #2d6cdf;
+    font-weight: 600;
+}
+
+.values-table td {
+    background-color: #fff;
+}
+
+.values-table tr:nth-child(even) td {
+    background-color: #f8faff;
+}
+
+.values-table tr:hover td {
+    background-color: #eef6ff;
+}
+
+/* === Responsive Images === */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.mockup {
+    width: 100%;
+    margin: 1rem 0;
+    overflow-x: hidden;
+}
+
+.mockup img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* === Blockquote Styling === */
+blockquote {
+    border-left: 4px solid #2d6cdf;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #444;
+    margin: 1rem 0;
+}
+
+/* === Audit Items === */
+.audit-item {
+    padding: 1rem;
+    background-color: #f6f9ff;
+    border-left: 4px solid #2d6cdf;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.audit-item h3 {
+    color: #2d6cdf;
+    margin-bottom: 0.5rem;
+}
+
+.audit-item ul {
+    padding-left: 1rem;
+    line-height: 1.6;
+}
+
+/* === List Styling === */
+ul {
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    font-family: monospace;
+    border-radius: 4px;
+}
+
+/* === Community Card (API) === */
+.community-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #fffbe6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+}
+
+.community-card h3 {
+    font-size: 1.2rem;
+    color: #2d6cdf;
+    margin: 0 0 0.5rem;
+}
+
+.community-card .card-message {
+    margin: 0.5rem 0;
+}
+
+.community-card img.member-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* === Breadcrumb === */
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+    color: #2d6cdf;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.values-table,
+.values-table th,
+.values-table td {
+    border: 1px solid #888 !important;
+    border-collapse: collapse !important;
+}

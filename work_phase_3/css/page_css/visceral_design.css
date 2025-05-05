@@ -1,0 +1,45 @@
+/* visceral_design.css */
+/* Imports gallery skeleton and viewer component */
+@import url("../component_skeletons/gallery.css");
+@import url("../component_skeletons/viewer.css");
+
+/* === Layout Gallery Section === */
+.layout-gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 默认手机端一列 */
+    gap: 2rem;
+    justify-items: center;
+    padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .layout-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 桌面端三列 */
+    }
+}
+
+.wireframe {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+.wireframe img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.wireframe figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+.layout-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}

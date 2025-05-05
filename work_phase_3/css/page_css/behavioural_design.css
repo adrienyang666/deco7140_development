@@ -1,0 +1,322 @@
+@import url("../../component_skeletons/form.css");
+
+/* behavioural_design.css */
+/* Styles specific to the behavioural_design.html page */
+
+/* Section spacing */
+.behavioural-section {
+    margin-top: 2rem;
+}
+
+/* === High-fidelity mockup section === */
+.mockup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.mockup-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mockup-container p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* === Interactive demo block === */
+.interactive-demo {
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* === Button Examples === */
+.button-example {
+    margin-top: 2rem;
+}
+
+.button-example h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* === Shared Button Base === */
+.btn {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+/* === Primary Button === */
+.btn-primary {
+    background-color: #2d6cdf;
+    color: white;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #1f4fb0;
+}
+.btn-primary:active {
+    transform: scale(0.97);
+}
+.btn-primary:disabled {
+    background-color: #cccccc;
+    color: #777777;
+    cursor: not-allowed;
+}
+
+/* === Secondary Button === */
+.btn-secondary {
+    background-color: white;
+    color: #2d6cdf;
+    border: 2px solid #2d6cdf;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #f0f4ff;
+}
+.btn-secondary:active {
+    transform: scale(0.97);
+}
+
+/* === Icon-only Button === */
+.btn-icon {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btn-icon:hover {
+    color: #2d6cdf;
+    transform: scale(1.1);
+}
+.btn-icon:focus {
+    outline: 2px solid #555;
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+/* === Focus Indicator for All Interactive Elements === */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+.btn:focus,
+.btn-icon:focus {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+    scroll-margin-top: 64px;
+}
+
+/* === Form Feedback === */
+#form-feedback.success {
+    color: green;
+}
+
+#form-feedback.error {
+    color: red;
+    font-weight: bold;
+    border-left: 4px solid red;
+    padding-left: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* === Fieldset / Legend Styling === */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: #222;
+    padding: 0 0.5rem;
+    font-size: 1rem;
+}
+
+/* === Values Mapping Table === */
+.values-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+.values-table th,
+.values-table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    vertical-align: top;
+    text-align: left;
+}
+
+.values-table th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+    color: #333;
+}
+
+.values-table td {
+    background-color: #fff;
+}
+
+.values-table caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* === Responsive table on small screens === */
+@media screen and (max-width: 768px) {
+    .values-table {
+        font-size: 0.9rem;
+    }
+
+    .values-table th,
+    .values-table td {
+        padding: 0.75rem;
+    }
+}
+
+/* === High Contrast Mode for Windows (optional but recommended) === */
+@media (forced-colors: active) {
+    button,
+    .btn,
+    .btn-icon,
+    input,
+    textarea {
+        forced-color-adjust: none;
+        background-color: ButtonFace;
+        color: ButtonText;
+        border: 2px solid ButtonText;
+    }
+}
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.interactive-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.interactive-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.interactive-card h3 {
+    font-size: 1.25rem;
+    color: #2d6cdf;
+    margin-bottom: 0.75rem;
+}
+
+.interactive-card p {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.interactive-card button {
+    align-self: flex-start;
+}
+.demo-navbar {
+    position: sticky;
+    top: 0;
+    background-color: #2d6cdf;
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding-left: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:focus,
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: #2d6cdf;
+        margin-top: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}

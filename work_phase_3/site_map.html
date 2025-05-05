@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+        <title>Work Phase 2</title>
+    </head>
+    <body>
+        <!-- START PAGE STRUCTURE -->
+        <nav id="nav-mobile" aria-label="Main Navigation"></nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation"></nav>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html" aria-current="page"
+                        ><span class="icon">🧭</span></a
+                    >
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li>
+                    <a href="site_map.html" aria-current="page">Site Map</a>
+                </li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+                <h1 class="page-title">Site Map</h1>
+
+
+
+                <img
+                    src="assets/qq.png"
+                    alt="YOUR_DESCRIPTION"
+                    class="responsive-img"
+                />
+
+                <section class="accordion m-y-3">
+                    <!-- Group 1: Inspiration -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">▷ Inspiration</button>
+                        <div class="accordion-content">
+                            <p class="m-y-2">
+                                Central hub for positive stories and
+                                intergenerational inspiration.
+                                <br /><strong>Client Need:</strong> Empowerment
+                                & belonging<br />
+                                <strong>User Story:</strong> "As an older adult,
+                                I want to share my gardening experience."<br />
+                                <strong>Accessibility:</strong> Clear navigation
+                                and keyboard-focus.<br />
+                                <strong>Visceral:</strong> Warm visuals and
+                                friendly tone.
+                            </p>
+
+                            <!-- Sub-page: Garden Showcase -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ Garden Showcase
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-2">
+                                            Showcases intergenerational
+                                            gardening projects.
+                                            <br /><strong
+                                                >Design Principle:</strong
+                                            >
+                                            Visual identity connects to comic
+                                            style (see
+                                            <a href="visceral_design.html"
+                                                >Visceral Design</a
+                                            >).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Group 2: Community -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">▷ Community</button>
+                        <div class="accordion-content">
+                            <p class="m-y-2">
+                                A space to foster trust, connection, and
+                                contributions from users.
+                                <br /><strong>Client Need:</strong> Reduce
+                                isolation<br />
+                                <strong>User Story:</strong> "As a youth, I want
+                                to connect with older generations." <br />
+                                <strong>Accessibility:</strong> Color contrast,
+                                readable typography<br />
+                                <strong>Visceral:</strong> Includes comforting
+                                comic-style avatars and messaging.
+                            </p>
+
+                            <!-- Sub-page: Member Reflections -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ Community Reflections
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-2">
+                                            Real user stories dynamically loaded
+                                            from API. See implementation in
+                                            <a href="behavioural_design.html"
+                                                >Behavioural Design</a
+                                            >.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sub-page: Join Form -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ Join the Community
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="m-y-2">
+                                            Includes accessible form with clear
+                                            ARIA labels, live feedback, and
+                                            validation. See
+                                            <a
+                                                href="behavioural_design.html#form-section"
+                                                >Form Section</a
+                                            >.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Group 3: Design System -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            ▷ Design System
+                        </button>
+                        <div class="accordion-content">
+                            <p class="m-y-2">
+                                Core components for consistency and reuse.
+                                <br /><strong>Client Need:</strong> Maintainable
+                                UI<br />
+                                <strong>User Story:</strong> "As a site
+                                maintainer, I want consistent design patterns."
+                            </p>
+
+                            <!-- Sub-pages -->
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ Style Guide
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Includes typography, color palette,
+                                            layout system and reusable UI
+                                            components. See
+                                            <a href="style_guide.html"
+                                                >Style Guide</a
+                                            >.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ Visceral Design
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Emphasizes first impressions and
+                                            emotional response through layout
+                                            and image styles. See
+                                            <a href="visceral_design.html"
+                                                >Visceral Design</a
+                                            >.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ Behavioural Design
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Interactive design that guides user
+                                            actions (buttons, cards, forms). See
+                                            <a href="behavioural_design.html"
+                                                >Behavioural Design</a
+                                            >.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Group 4: Ethics & GenAI -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            ▷ Ethics & Transparency
+                        </button>
+                        <div class="accordion-content">
+                            <p class="m-y-2">
+                                Ethics response to client plug-in request, and
+                                AI usage disclosure.
+                                <br /><strong>Client Need:</strong> Trust &
+                                transparency<br />
+                                <strong>Accessibility:</strong> Informed consent
+                                and data protection.
+                            </p>
+                            <div class="accordion nested">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ Ethical Response
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            See
+                                            <a href="ethical_response.html"
+                                                >Ethical Response</a
+                                            >
+                                            page outlining alternative to
+                                            third-party plug-ins.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        ▹ GenAI Acknowledgement
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p>
+                                            Disclosure of GenAI/MT use in Work
+                                            Phase 2. See
+                                            <a
+                                                href="genai_mt_acknowledgement.html"
+                                                >GenAI Acknowledgement</a
+                                            >.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- END PAGE STRUCTURE -->
+        <script type="module">
+            import { initAccordion } from "./js/modules/accordion.js";
+            initAccordion(".accordion");
+        </script>
+    </body>
+</html>

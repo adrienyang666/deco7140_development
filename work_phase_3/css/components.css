@@ -1,0 +1,309 @@
+@import "./component_skeletons/accordion.css";
+
+/* MENUS */
+/* MENUS */
+/* Base styles */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive control */
+/* Media query should be below here */
+
+/* Responsive control */
+@media screen and (min-width: 768px) {
+    #nav-desktop {
+        display: block;
+    }
+
+    #nav-mobile {
+        display: none;
+    }
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Desktop override */
+@media (min-width: 768px) {
+    .hero-text {
+        font-size: 1.75rem;
+        text-align: left;
+    }
+}
+#nav-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+/* 默认：两个都不显示，防止闪烁 */
+#nav-mobile,
+#nav-desktop {
+    display: none;
+}
+#nav-mobile ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+#nav-desktop {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+/* Remember - media query should be below here */
+#nav-desktop ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Remember - media query should be below here */
+
+/* Mobile only */
+@media (max-width: 767px) {
+    #nav-mobile {
+        display: block;
+    }
+}
+
+/* Desktop only */
+@media (min-width: 768px) {
+    main {
+        padding-top: 5rem; /* 根据你 desktop nav 的高度调整 */
+    }
+    #nav-desktop {
+        display: block;
+    }
+}
+
+#nav-desktop ul li a:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* components.css */
+/* Shared reusable card component styles */
+
+/* Card container - for wrapping multiple cards */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Basic card style skeleton */
+.card {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive layout for desktop */
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(33.33% - 14px);
+        margin-bottom: 20px;
+    }
+}
+/* === Accessible Focus Styles === */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+.btn:focus,
+.btn-icon:focus {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+    scroll-margin-top: 64px; /* 避免 sticky header 遮挡 */
+}
+
+/* === Primary Button Accessibility === */
+.btn-primary {
+    background-color: #0055cc;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #003fa3;
+}
+
+/* === Secondary Button Accessibility === */
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #222;
+    border: 1px solid #aaa;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #d2d2d2;
+    border-color: #555;
+}
+
+/* === Icon Button Accessibility === */
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-icon:focus {
+    outline: 2px solid #555;
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+/* === Disabled Button === */
+button[disabled],
+.btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.hero-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+.top-text-nav {
+    background-color: white;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    max-width: 960px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.top-text-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-text-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.top-text-nav a:hover {
+    color: #2d6cdf;
+    text-decoration: underline;
+}
+.main-page-nav {
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.main-page-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-page-nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-page-nav li a:hover {
+    color: #2d6cdf;
+}

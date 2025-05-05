@@ -1,0 +1,60 @@
+/* === PAGE CONTAINER === */
+
+/* 全局页面背景 */
+body {
+    background-color: rgb(235, 198, 216);
+}
+
+/* 移动端默认样式 */
+.container {
+    width: 95vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: white;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 85vw;
+        padding: 2rem;
+    }
+}
+
+
+/* === Helper Classes === */
+.m-y-1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.m-y-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.m-y-3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.p-x-3 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* === Windows High Contrast Mode Support === */
+@media (forced-colors: active) {
+    button,
+    .btn,
+    .btn-icon,
+    input,
+    textarea {
+        forced-color-adjust: none;
+        background-color: ButtonFace;
+        color: ButtonText;
+        border: 2px solid ButtonText;
+    }
+}
