@@ -95,20 +95,16 @@ textarea:focus {
 #nav-mobile ul li {
   list-style: none;
 }
-#nav-desktop a,
-#nav-mobile a {
-  font-family: 'Poppins', sans-serif;  /* 或你自己的主字体 */
-  font-weight: 500;                     /* 中等粗细，统一全站 */
-  font-size: 1rem;
-  color: #222;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5rem 1rem;
+body {
+    background-color: #F9F9F9;
 }
-
-#nav-desktop a[aria-current="page"],
-#nav-mobile a[aria-current="page"] {
-  color: #2d6cdf;
-  text-decoration: underline; /* 可以保留视觉提示，但避免 font-weight 差异 */
-  font-weight: 500;
+.container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+html, body {
+    background-color: #F9F9F9 !important;
+    min-height: 100vh;
 }
