@@ -1,0 +1,44 @@
+/* css/layout.css */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* Flex-based layout for header and nav */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  background: #fff;
+  border-bottom: 1px solid #e2e7ef;
+}
+
+main {
+  padding: 2rem 0 2rem 0;
+  min-height: 60vh;
+}
+
+footer .container {
+  padding: 1.5rem 0;
+  border-top: 1px solid #e2e7ef;
+  text-align: center;
+  background: #f1f4f9;
+  color: #888;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0 0.7rem;
+  }
+  main {
+    padding: 1rem 0 1rem 0;
+  }
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.7rem 0;
+  }
+}

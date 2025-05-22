@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CCI Community Hub | Contact Us</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/contact.css" />
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <header>
+            <div class="container">
+                <h1 class="site-title">CCI Community Hub</h1>
+                <nav aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <a href="contact.html" aria-current="page"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content">
+            <section class="banner">
+                <h2>Contact Us</h2>
+                <p>
+                    We're here to help! Fill out the form or email us directly.
+                </p>
+            </section>
+            <section
+                class="contact-section"
+                aria-labelledby="contact-form-heading"
+            >
+                <h3 id="contact-form-heading">Send a Message</h3>
+                <form class="contact-form" aria-label="Contact form">
+                    <label for="name">Name:</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        aria-required="true"
+                        autocomplete="name"
+                    />
+
+                    <label for="email">Email:</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        aria-required="true"
+                        autocomplete="email"
+                    />
+
+                    <label for="message">Message:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        aria-required="true"
+                    ></textarea>
+
+                    <button type="submit" class="button">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p>
+                        Or email us:
+                        <a href="mailto:info@cci.org">info@cci.org</a>
+                    </p>
+                    <p>
+                        Follow us on
+                        <a
+                            href="https://instagram.com/cci_community"
+                            target="_blank"
+                            rel="noopener"
+                            >Instagram</a
+                        >
+                        or
+                        <a
+                            href="https://facebook.com/cci_community"
+                            target="_blank"
+                            rel="noopener"
+                            >Facebook</a
+                        >
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>
+                    &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

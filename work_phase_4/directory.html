@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CCI Community Hub | Directory</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/directory.css" />
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <header>
+            <div class="container">
+                <h1 class="site-title">CCI Community Hub</h1>
+                <nav aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="directory.html" aria-current="page"
+                                >Directory</a
+                            >
+                        </li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content">
+            <section class="banner">
+                <h2>Community Directory</h2>
+                <p>
+                    Discover local groups, organisations, and resources that
+                    support and enrich our community life.
+                </p>
+            </section>
+            <form id="filter-form" aria-label="Filter community members">
+                <label for="category">Filter by category:</label>
+                <select id="category" name="category">
+                    <option value="all">All</option>
+                    <option value="service">Service</option>
+                    <option value="organization">Organization</option>
+                    <option value="volunteer">Volunteer</option>
+                </select>
+            </form>
+            <section
+                class="directory-list"
+                aria-label="Community services and groups"
+            >
+                <article class="card" data-category="service">
+                    <img
+                        src="images/service-foodbank.jpg"
+                        alt="Food bank volunteers distributing supplies"
+                    />
+                    <h3>Community Food Bank</h3>
+                    <p>
+                        Provides free groceries and support for families in need
+                        every Thursday. Open to all residents.
+                    </p>
+                    <a class="button" href="contact.html">Contact Food Bank</a>
+                </article>
+                <article class="card" data-category="organization">
+                    <img
+                        src="images/org-green.jpg"
+                        alt="Green group cleaning up local park"
+                    />
+                    <h3>Green Neighbourhood Group</h3>
+                    <p>
+                        Environmental activities, park clean-ups, and
+                        sustainability workshops for eco-friendly living.
+                    </p>
+                    <a class="button" href="contact.html">Join Green Group</a>
+                </article>
+                <article class="card" data-category="volunteer">
+                    <img
+                        src="images/volunteer-elderly.jpg"
+                        alt="Volunteer helping an elderly person with groceries"
+                    />
+                    <h3>Helping Hands Volunteer Program</h3>
+                    <p>
+                        Support seniors with shopping, home visits, and
+                        companionship. Flexible hours—join anytime!
+                    </p>
+                    <a class="button" href="contact.html">Become a Volunteer</a>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>
+                    &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

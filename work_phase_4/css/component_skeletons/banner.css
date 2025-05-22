@@ -1,0 +1,9 @@
+/* Banner skeleton: 横幅大区块 */
+.banner-skeleton {
+  background: linear-gradient(90deg, #a9c9ff 0%, #f9f9f9 100%);
+  padding: 2.5rem 1rem;
+  border-radius: 18px;
+  margin-bottom: 2.1rem;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(32,117,214,0.08);
+}

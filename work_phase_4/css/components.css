@@ -1,0 +1,86 @@
+/* css/components.css */
+
+/* 导航栏 */
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.nav-list li {
+  font-size: 1rem;
+}
+.nav-list a[aria-current="page"] {
+  font-weight: bold;
+  border-bottom: 2px solid #2075d6;
+  color: #143768;
+}
+.nav-list a:focus {
+  outline: 2px solid #2075d6;
+  border-radius: 2px;
+}
+
+/* Button统一样式 */
+.button,
+button,
+[type="submit"] {
+  display: inline-block;
+  padding: 0.7em 1.5em;
+  background: #2075d6;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(32,117,214,0.08);
+  outline: none;
+  letter-spacing: 0.02em;
+}
+.button:hover,
+button:hover,
+[type="submit"]:hover,
+.button:focus,
+button:focus,
+[type="submit"]:focus {
+  background: #143768;
+  box-shadow: 0 4px 16px rgba(20,55,104,0.12);
+  outline: 2px solid #2075d6;
+  outline-offset: 1px;
+}
+
+
+/* 统一Card样式：用于 directory-card, event-card, story-card 等 */
+.card,
+.directory-card,
+.event-card,
+.story-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(41, 81, 139, 0.07);
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.7rem;
+  transition: box-shadow 0.2s, border 0.2s;
+  border: 1px solid #e3eaf4;
+  font-size: 1rem;
+  color: #222;
+  /* 保证字体、行高统一 */
+  font-family: inherit;
+  line-height: 1.6;
+}
+.card:hover,
+.directory-card:hover,
+.event-card:hover,
+.story-card:hover {
+  box-shadow: 0 6px 24px 0 rgba(41, 81, 139, 0.13);
+  border-color: #2075d6;
+}
+@media (max-width: 700px) {
+  .card,
+  .directory-card,
+  .event-card,
+  .story-card {
+    padding: 1rem 0.7rem;
+    margin-bottom: 1.2rem;
+  }
+}
+

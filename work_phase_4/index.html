@@ -3,14 +3,103 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>WORK PHASE4</title>
+        <title>CCI Community Hub | Home</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/index.css" />
     </head>
     <body>
-        <h1>Adrien Work Phase3</h1>
-        <section>
-            <h2>what you gonna see</h2>
-            <p>“Lost time is never found again.”</p>
-        </section>
-        <a href="../index.html">Home</a>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <header>
+            <div class="container">
+                <h1 class="site-title">CCI Community Hub</h1>
+                <nav aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="index.html" aria-current="page">Home</a>
+                        </li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content">
+            <section class="hero">
+                <h2>Welcome to CCI Community Hub!</h2>
+                <p>
+                    Building a stronger community through events, resources, and
+                    stories that connect us all.
+                </p>
+            </section>
+            <section
+                class="quick-links"
+                aria-label="Quick access to main sections"
+            >
+                <ul>
+                    <li>
+                        <a class="button" href="directory.html"
+                            >Explore Community Directory</a
+                        >
+                    </li>
+                    <li>
+                        <a class="button" href="events.html"
+                            >View Upcoming Events</a
+                        >
+                    </li>
+                    <li>
+                        <a class="button" href="stories.html"
+                            >Read Community Stories</a
+                        >
+                    </li>
+                </ul>
+            </section>
+            <section class="home-highlights">
+                <h2>Our Highlights</h2>
+                <div class="card" aria-label="Highlight: Spring Festival">
+                    <img
+                        src="images/highlight-spring.jpg"
+                        alt="Community members celebrating Spring Festival"
+                    />
+                    <h3>Spring Festival Gathering</h3>
+                    <p>
+                        We welcomed over 200 participants at our annual Spring
+                        Festival event—sharing food, music, and joy with all
+                        ages.
+                    </p>
+                    <a class="button" href="events.html#spring-festival"
+                        >See Event Details</a
+                    >
+                </div>
+                <div class="card" aria-label="Highlight: Volunteer Workshops">
+                    <img
+                        src="images/highlight-volunteer.jpg"
+                        alt="Volunteers collaborating at a workshop"
+                    />
+                    <h3>Volunteer Workshops</h3>
+                    <p>
+                        Monthly skill-building sessions help new volunteers find
+                        their passion and learn how to give back to the
+                        community.
+                    </p>
+                    <a class="button" href="directory.html#volunteer"
+                        >Learn More about Volunteering</a
+                    >
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>
+                    &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <script type="module" src="js/main.js"></script>
     </body>
 </html>
