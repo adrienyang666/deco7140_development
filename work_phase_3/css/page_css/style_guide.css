@@ -137,3 +137,28 @@
     color: #2d6cdf;
     text-decoration: underline;
 }
+.design-layers-nav {
+    font-size: 1.8rem !important;            /* 更大字体，强制生效 */
+    font-weight: 700 !important;             /* 加粗文字 */
+    text-align: center !important;           /* 居中对齐 */
+    background-color: #e0f2fe !important;    /* 更明显的背景色 */
+    color: #0c4a6e !important;               /* 深蓝色文字 */
+    padding: 1.2rem 1rem !important;
+    margin: 2rem auto !important;
+    border: 3px solid #0284c7 !important;    /* 更粗边框 */
+    border-radius: 16px !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important; /* 明显阴影 */
+    width: fit-content;
+}
+
+.design-layers-nav a {
+    color: #0369a1 !important;
+    text-decoration: none !important;
+    margin: 0 0.75rem;
+    font-weight: 600;
+}
+
+.design-layers-nav a:hover {
+    text-decoration: underline !important;
+}
+
