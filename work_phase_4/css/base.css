@@ -1,40 +1,132 @@
+/* 全局字体与基础色彩设置 */
 body {
-  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  background: #f7f9fb;
-  color: #222;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; /* 优先使用现代无衬线字体 */
+  background: #f7f9fb; /* 淡蓝灰色背景，提升页面清爽感 */
+  color: #222;         /* 主体文字为深灰色，便于阅读 */
 }
+
+/* 标题通用样式：加粗、品牌色、紧凑行高 */
 h1, h2, h3, h4 {
-  font-weight: bold;
-  color: #143768;
-  line-height: 1.2;
+  font-weight: bold;    /* 标题加粗突出 */
+  color: #143768;       /* 统一品牌深蓝色 */
+  line-height: 1.2;     /* 紧凑但不拥挤的标题行高 */
 }
+
+/* 链接默认颜色为亮蓝色 */
 a {
   color: #2075d6;
 }
+
+/* 鼠标悬停或获得焦点时：深蓝色、下划线 */
 a:hover, a:focus {
   color: #143768;
   text-decoration: underline;
 }
 
-
-/* Skip link (hidden until focused) */
+/* 跳转主内容的无障碍“跳转链接”样式 */
+/* 默认情况下隐藏，只在获得焦点时可见 */
 .skip-link {
-  position: absolute;
-  left: -999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
+  position: absolute; /* 脱离文档流 */
+  left: -999px;       /* 移出屏幕外 */
+  width: 1px; height: 1px;
   overflow: hidden;
-  z-index: 100;
+  z-index: 100;       /* 保证覆盖其他内容 */
 }
+
+/* 获得焦点时显示在左上角，样式突出 */
 .skip-link:focus {
   left: 16px;
   top: 16px;
-  width: auto;
-  height: auto;
+  width: auto; height: auto;
+  background: #fff;         /* 白底突出 */
+  color: #2075d6;           /* 文字为亮蓝色 */
+  padding: 0.5em 1em;       /* 内边距方便点击 */
+  border-radius: 4px;       /* 圆角 */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* 轻微阴影 */
+}
+/* 容器宽度全站统一（所有页面内容不贴边） */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 全站焦点可见指示（增强键盘可访问性） */
+a:focus-visible, .button:focus-visible {
+  outline: 2px solid #2574a9;
+  outline-offset: 2px;
+}
+
+/* 统一主按钮样式，可全站复用 */
+.button {
+  background: #2075d6;
+  color: #fff;
+  padding: 0.75rem 1.6rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.button:hover, .button:focus-visible {
+  background: #143768;
+  color: #fff;
+}
+
+/* 适合多页面的自适应 */
+@media (max-width: 700px) {
+  .container { padding: 0 0.8rem; }
+}
+
+/* ---- 如需更明显的区域色块/卡片/提示区，可以继续加 ---- */
+
+/* 通用卡片样式 */
+.card {
   background: #fff;
-  color: #2075d6;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px #e6e9ef;
+  padding: 1.5rem;
+  max-width: 340px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card img { border-radius: 0.7rem; margin-bottom: 1rem; width: 100%; max-width: 180px;}
+.card h3 { font-size: 1.22rem; margin: 0.5rem 0 0.3rem 0;}
+.card p { font-size: 1rem; color: #555;}
+
+/* 栅格排列的高亮区/卡片区 */
+.highlight-grid { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+
+/* 快速链接区块横排 */
+.quick-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0 2.5rem 0; }
+.quick-links .button { font-size: 1rem; padding: 0.8rem 1.6rem; border-radius: 2rem; }
+
+/* 反馈入口统一样式 */
+.feedback {
+  background: #fffbe6;
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* 小屏下排版自动竖直 */
+@media (max-width: 900px) {
+  .highlight-grid, .quick-links { flex-direction: column; gap: 1.2rem; align-items: center; }
+  .card { max-width: 95%; }
+}
+
+.section-title {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0; /* 如果上方已经有margin就设为0 */
+  letter-spacing: 0.01em;
+}
+.home-highlights {
+  padding: 0 0 2.5rem 0; /* 或更大留白，看你风格 */
 }

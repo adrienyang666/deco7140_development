@@ -9,12 +9,59 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/directory.css" />
+        <style>
+            /* 可以根据需要合并到你的css文件里 */
+            .banner {
+                background: #e6f6ff;
+                border-radius: 1.3rem;
+                padding: 2rem 1.5rem;
+                text-align: center;
+                margin-bottom: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+                text-align: center;
+                margin-bottom: 1.5rem;
+                margin-top: 0;
+                letter-spacing: 0.01em;
+                color: #143768;
+            }
+            #filter-form {
+                margin: 0 auto 2rem auto;
+                max-width: 450px;
+                text-align: center;
+            }
+            #filter-form label {
+                font-weight: bold;
+                margin-right: 0.5em;
+            }
+            #filter-form select {
+                padding: 0.4em 1.2em;
+                border-radius: 0.6em;
+                border: 1px solid #c2dae9;
+                font-size: 1rem;
+            }
+        </style>
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
-            <div class="container">
-                <h1 class="site-title">CCI Community Hub</h1>
+            <div class="container header-flex">
+                <div>
+                    <h1 class="site-title">CCI Community Hub</h1>
+                    <p class="site-tagline">
+                        Part of the Connect Communities Initiative
+                    </p>
+                </div>
+                <meta
+                    name="description"
+                    content="Find local community groups, support services, and volunteer opportunities in the CCI Community Hub directory. Accessible, inclusive, and multilingual community resources."
+                />
+                <meta
+                    name="keywords"
+                    content="community, directory, support, volunteer, multicultural, services, CCI"
+                />
+
                 <nav aria-label="Main navigation">
                     <ul class="nav-list">
                         <li><a href="index.html">Home</a></li>
@@ -31,12 +78,13 @@
                 </nav>
             </div>
         </header>
-        <main id="main-content">
+        <main id="main-content" class="container">
             <section class="banner">
-                <h2>Community Directory</h2>
+                <h2 class="section-title">Community Directory</h2>
                 <p>
                     Discover local groups, organisations, and resources that
-                    support and enrich our community life.
+                    support and enrich our community life. Browse or filter by
+                    type to connect with services that match your needs.
                 </p>
             </section>
             <form id="filter-form" aria-label="Filter community members">
@@ -49,12 +97,13 @@
                 </select>
             </form>
             <section
-                class="directory-list"
+                class="highlight-grid"
                 aria-label="Community services and groups"
             >
+                <!-- 卡片1 -->
                 <article class="card" data-category="service">
                     <img
-                        src="images/service-foodbank.jpg"
+                        src="images/food.png"
                         alt="Food bank volunteers distributing supplies"
                     />
                     <h3>Community Food Bank</h3>
@@ -64,9 +113,10 @@
                     </p>
                     <a class="button" href="contact.html">Contact Food Bank</a>
                 </article>
+                <!-- 卡片2 -->
                 <article class="card" data-category="organization">
                     <img
-                        src="images/org-green.jpg"
+                        src="images/green.png"
                         alt="Green group cleaning up local park"
                     />
                     <h3>Green Neighbourhood Group</h3>
@@ -76,9 +126,10 @@
                     </p>
                     <a class="button" href="contact.html">Join Green Group</a>
                 </article>
+                <!-- 卡片3 -->
                 <article class="card" data-category="volunteer">
                     <img
-                        src="images/volunteer-elderly.jpg"
+                        src="images/old.png"
                         alt="Volunteer helping an elderly person with groceries"
                     />
                     <h3>Helping Hands Volunteer Program</h3>
@@ -88,12 +139,85 @@
                     </p>
                     <a class="button" href="contact.html">Become a Volunteer</a>
                 </article>
+                <!-- 可以继续加新卡片，布局自动对齐 -->
+                <article class="card" data-category="organization">
+                    <img
+                        src="images/language.png"
+                        alt="People sitting together learning languages"
+                    />
+                    <h3>Language Exchange Group</h3>
+                    <p>
+                        Practice English and other languages in a supportive
+                        group—open to everyone! Multilingual volunteers
+                        available.
+                    </p>
+                    <a class="button" href="contact.html"
+                        >Join Language Group</a
+                    >
+                </article>
+
+                <article class="card" data-category="service">
+                    <img
+                        src="images/kitchen.png"
+                        alt="People sharing international foods"
+                    />
+                    <h3>Multicultural Kitchen</h3>
+                    <p>
+                        Join our monthly multicultural potluck—share your
+                        favourite recipes and connect through food.
+                    </p>
+                    <a class="button" href="events.html#kitchen" role="button"
+                        >Join the Kitchen</a
+                    >
+                </article>
+
+                <article class="card" data-category="organization">
+                    <img
+                        src="images/youthclub.png"
+                        alt="Young people playing sports in a park"
+                    />
+                    <h3>Youth Sports Club</h3>
+                    <p>
+                        Free weekly sports and activities for teens and
+                        children—everyone welcome. Accessible venue!
+                    </p>
+                    <a class="button" href="events.html#youth" role="button"
+                        >View Schedule</a
+                    >
+                </article>
+
+                <article class="card" data-category="volunteer">
+                    <img
+                        src="images/art.png"
+                        alt="Elderly people doing art together"
+                    />
+                    <h3>Seniors’ Arts Group</h3>
+                    <p>
+                        Social art workshops for seniors—painting, crafts, and
+                        friendly gatherings every Friday.
+                    </p>
+                    <a class="button" href="contact.html">Sign Up</a>
+                </article>
+            </section>
+            <section class="feedback">
+                <div class="container">
+                    <h2 class="section-title">Can't find what you need?</h2>
+                    <p>
+                        <a class="button" href="contact.html" role="button"
+                            >Contact us for help or to suggest a new group</a
+                        >
+                    </p>
+                </div>
             </section>
         </main>
         <footer>
             <div class="container">
                 <p>
                     &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+                <p style="font-size: 0.93rem">
+                    This platform respects privacy and cultural diversity in all
+                    activities.
                 </p>
             </div>
         </footer>

@@ -9,12 +9,50 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/index.css" />
+        <style>
+            /* Accessibility focus style for skip link and navigation */
+            .skip-link {
+                position: absolute;
+                left: -999px;
+                top: auto;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                z-index: 1000;
+                background: #ffe066;
+                color: #333;
+                font-weight: bold;
+                padding: 8px 18px;
+                border-radius: 8px;
+                transition: left 0.2s;
+            }
+            .skip-link:focus {
+                left: 16px;
+                top: 16px;
+                width: auto;
+                height: auto;
+                font-size: 1rem;
+            }
+            a:focus-visible,
+            .button:focus-visible {
+                outline: 2px solid #2574a9;
+                outline-offset: 2px;
+            }
+        </style>
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
             <div class="container">
-                <h1 class="site-title">CCI Community Hub</h1>
+                <div>
+                    <h1 class="site-title">Community Hub</h1>
+                    <p
+                        class="site-tagline"
+                        style="margin-top: -8px; color: #52796f"
+                    >
+                        Part of the Connect Communities Initiative
+                    </p>
+                </div>
                 <nav aria-label="Main navigation">
                     <ul class="nav-list">
                         <li>
@@ -31,10 +69,20 @@
         </header>
         <main id="main-content">
             <section class="hero">
-                <h2>Welcome to CCI Community Hub!</h2>
+                <h2>Welcome to Community Hub!</h2>
                 <p>
-                    Building a stronger community through events, resources, and
-                    stories that connect us all.
+                    Building a stronger, more
+                    <strong>inclusive</strong> community through events,
+                    resources, and stories that connect us all.<br />
+                    <span style="color: #2176ae">
+                        We are dedicated to fostering
+                        <strong>meaningful connections</strong> for everyone in
+                        our diverse community, supporting
+                        <strong
+                            >youth, seniors, migrants, and all who call this
+                            place home</strong
+                        >.
+                    </span>
                 </p>
             </section>
             <section
@@ -43,53 +91,160 @@
             >
                 <ul>
                     <li>
-                        <a class="button" href="directory.html"
+                        <a class="button" href="directory.html" role="button"
                             >Explore Community Directory</a
                         >
                     </li>
                     <li>
-                        <a class="button" href="events.html"
+                        <a class="button" href="events.html" role="button"
                             >View Upcoming Events</a
                         >
                     </li>
                     <li>
-                        <a class="button" href="stories.html"
+                        <a class="button" href="stories.html" role="button"
                             >Read Community Stories</a
                         >
                     </li>
                 </ul>
             </section>
             <section class="home-highlights">
-                <h2>Our Highlights</h2>
-                <div class="card" aria-label="Highlight: Spring Festival">
-                    <img
-                        src="images/highlight-spring.jpg"
-                        alt="Community members celebrating Spring Festival"
-                    />
-                    <h3>Spring Festival Gathering</h3>
-                    <p>
-                        We welcomed over 200 participants at our annual Spring
-                        Festival event—sharing food, music, and joy with all
-                        ages.
-                    </p>
-                    <a class="button" href="events.html#spring-festival"
-                        >See Event Details</a
-                    >
-                </div>
-                <div class="card" aria-label="Highlight: Volunteer Workshops">
-                    <img
-                        src="images/highlight-volunteer.jpg"
-                        alt="Volunteers collaborating at a workshop"
-                    />
-                    <h3>Volunteer Workshops</h3>
-                    <p>
-                        Monthly skill-building sessions help new volunteers find
-                        their passion and learn how to give back to the
-                        community.
-                    </p>
-                    <a class="button" href="directory.html#volunteer"
-                        >Learn More about Volunteering</a
-                    >
+                <div class="container">
+                    <h2 class="section-title">Our Highlights</h2>
+                    <div class="highlight-grid">
+                        <!-- 卡片1 -->
+                        <div
+                            class="card"
+                            aria-label="Highlight: Spring Festival"
+                        >
+                            <img
+                                src="images/spring.png"
+                                alt="Community members celebrating Spring Festival"
+                            />
+                            <h3>Spring Festival Gathering</h3>
+                            <p>
+                                Over 200 participants joined our annual Spring
+                                Festival—sharing food, music, and joy across
+                                generations and cultures.
+                            </p>
+                            <a
+                                class="button"
+                                href="events.html#spring-festival"
+                                role="button"
+                                >See Event Details</a
+                            >
+                        </div>
+                        <!-- 卡片2 -->
+                        <div
+                            class="card"
+                            aria-label="Highlight: Volunteer Workshops"
+                        >
+                            <img
+                                src="images/commu.png"
+                                alt="Volunteers collaborating at a workshop"
+                            />
+                            <h3>Volunteer Workshops</h3>
+                            <p>
+                                Monthly skill-building sessions help new
+                                volunteers find their passion and learn how to
+                                give back to the community.
+                            </p>
+                            <a
+                                class="button"
+                                href="directory.html#volunteer"
+                                role="button"
+                                >Learn More</a
+                            >
+                        </div>
+                        <!-- 卡片3 -->
+                        <div
+                            class="card"
+                            aria-label="Highlight: Local Support Services"
+                        >
+                            <img
+                                src="images/support.png"
+                                alt="People talking to a counselor"
+                            />
+                            <h3>Local Support Services</h3>
+                            <p>
+                                Access free mental health, legal, and language
+                                support services in our community. Get help when
+                                you need it most—find resources and caring
+                                professionals nearby.
+                            </p>
+                            <a
+                                class="button"
+                                href="directory.html#support"
+                                role="button"
+                                >Find Support</a
+                            >
+                        </div>
+                        <!-- 卡片4 -->
+                        <div
+                            class="card"
+                            aria-label="Highlight: Youth Activities"
+                        >
+                            <img
+                                src="images/youth.png"
+                                alt="Teens in a coding workshop"
+                            />
+                            <h3>Youth Activities</h3>
+                            <p>
+                                Join sports, coding workshops, and creative
+                                clubs designed for youth. Discover new skills
+                                and make friends in a fun and safe environment!
+                            </p>
+                            <a
+                                class="button"
+                                href="events.html#youth"
+                                role="button"
+                                >Explore Activities</a
+                            >
+                        </div>
+                        <!-- 卡片5 -->
+                        <div
+                            class="card"
+                            aria-label="Highlight: Green Community Initiative"
+                        >
+                            <img
+                                src="images/green.png"
+                                alt="Volunteers planting trees"
+                            />
+                            <h3>Green Community Initiative</h3>
+                            <p>
+                                Join our environmental projects—tree planting,
+                                recycling, and more. Help build a greener, more
+                                sustainable future for everyone!
+                            </p>
+                            <a
+                                class="button"
+                                href="events.html#green"
+                                role="button"
+                                >See Green Events</a
+                            >
+                        </div>
+                        <!-- 卡片6 -->
+                        <div
+                            class="card"
+                            aria-label="Highlight: Multicultural Kitchen"
+                        >
+                            <img
+                                src="images/kitchen.png"
+                                alt="People sharing diverse foods"
+                            />
+                            <h3>Multicultural Kitchen</h3>
+                            <p>
+                                Celebrate diversity with our Multicultural
+                                Kitchen events—cook, taste, and share recipes
+                                from around the world!
+                            </p>
+                            <a
+                                class="button"
+                                href="events.html#kitchen"
+                                role="button"
+                                >Join the Kitchen</a
+                            >
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -97,6 +252,10 @@
             <div class="container">
                 <p>
                     &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+                <p style="font-size: 0.93rem">
+                    This platform respects privacy and cultural diversity in all
+                    activities.
                 </p>
             </div>
         </footer>

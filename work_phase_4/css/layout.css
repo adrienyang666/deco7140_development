@@ -1,44 +1,143 @@
-/* css/layout.css */
+/* layout.css 简化版（含中文注释） */
+
+/* 标题统一上下间距 */
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* 段落与列表下方留空，便于阅读 */
+p,
+ul,
+ol {
+    margin-bottom: 1.2rem;
+}
+
+/* 卡片内标题间距优化 */
+.card h3 {
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 通用容器设置最大宽度并水平居中，两侧有间距 */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Flex-based layout for header and nav */
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 0;
-  background: #fff;
-  border-bottom: 1px solid #e2e7ef;
-}
-
-main {
-  padding: 2rem 0 2rem 0;
-  min-height: 60vh;
-}
-
-footer .container {
-  padding: 1.5rem 0;
-  border-top: 1px solid #e2e7ef;
-  text-align: center;
-  background: #f1f4f9;
-  color: #888;
-}
-
+/* 小屏幕时缩小容器内边距，提升适配性 */
 @media (max-width: 700px) {
-  .container {
-    padding: 0 0.7rem;
-  }
-  main {
-    padding: 1rem 0 1rem 0;
-  }
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: 0.7rem 0;
-  }
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* 头部导航使用flex布局，项目两端对齐，背景白色，下方有边线 */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+    background: #fff;
+    border-bottom: 1px solid #e2e7ef;
+}
+
+/* 移动端：头部纵向排列，间距变小 */
+@media (max-width: 700px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.7rem 0;
+    }
+}
+
+/* 主体内容上下留白，并设置最小高度保证页面不会太短 */
+main {
+    padding: 2rem 0;
+    min-height: 60vh;
+}
+
+/* 移动端：主体留白缩小 */
+@media (max-width: 700px) {
+    main {
+        padding: 1rem 0;
+    }
+}
+
+/* 页脚居中，顶部有分割线，背景色偏浅，字体颜色灰色 */
+footer .container {
+    padding: 1.5rem 0;
+    border-top: 1px solid #e2e7ef;
+    text-align: center;
+    background: #f1f4f9;
+    color: #888;
+}
+
+/* 各个大区块统一上下间距，让布局更呼吸 */
+section,
+.hero,
+.banner,
+.home-highlights,
+.quick-links {
+    margin: 2.5rem 0;
+}
+
+/* 卡片与卡片骨架下方有统一留白 */
+.card,
+.card-skeleton {
+    margin-bottom: 2rem;
+}
+
+/* 卡片列表和首页亮点区横向排列，多行自动换行，卡片间有间距 */
+.card-list,
+.home-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* 移动端卡片竖直排列，间距更紧凑 */
+@media (max-width: 700px) {
+    .card-list,
+    .home-highlights {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+
+/* 按钮与骨架按钮统一上下间距 */
+.button,
+.button-skeleton {
+    margin: 1rem 0 0.5rem 0;
+}
+
+/* 联系表单标签上面留白，下面也留出小间距，并独占一行 */
+.contact-form label {
+    margin: 1rem 0 0.4rem 0;
+    display: block;
+}
+
+/* 表单输入框和文本域样式，宽度100%，边角圆润 */
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1.2rem;
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #b6c6dd;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* 欢迎区和横幅区，浅色背景、圆角、内边距和轻微阴影 */
+.hero,
+.banner {
+    background: #f6faff;
+    border-radius: 18px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 2px 16px 0 rgba(32, 117, 214, 0.08);
 }

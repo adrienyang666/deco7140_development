@@ -9,12 +9,34 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/stories.css" />
+        <style>
+            .banner {
+                background: #e6f6ff;
+                border-radius: 1.3rem;
+                padding: 2rem 1.5rem;
+                text-align: center;
+                margin-bottom: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+                text-align: center;
+                margin-bottom: 1.5rem;
+                margin-top: 0;
+                letter-spacing: 0.01em;
+                color: #143768;
+            }
+        </style>
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
-            <div class="container">
-                <h1 class="site-title">CCI Community Hub</h1>
+            <div class="container header-flex">
+                <div>
+                    <h1 class="site-title">CCI Community Hub</h1>
+                    <p class="site-tagline">
+                        Part of the Connect Communities Initiative
+                    </p>
+                </div>
                 <nav aria-label="Main navigation">
                     <ul class="nav-list">
                         <li><a href="index.html">Home</a></li>
@@ -31,18 +53,27 @@
                 </nav>
             </div>
         </header>
-        <main id="main-content">
+        <main id="main-content" class="container">
             <section class="banner">
-                <h2>Community Stories</h2>
+                <h2 class="section-title">Community Stories</h2>
                 <p>
                     Read inspiring stories from our members and see the impact
-                    we can make together.
+                    we can make together.<br />
+                    <span style="font-size: 1rem; color: #2176ae">
+                        Want to share your own story?
+                        <a
+                            href="contact.html"
+                            style="color: #2176ae; text-decoration: underline"
+                            >Contact us!</a
+                        >
+                    </span>
                 </p>
             </section>
             <section
-                class="story-list"
+                class="highlight-grid"
                 aria-label="Personal stories from community members"
             >
+                <!-- 故事卡片1 -->
                 <article class="card">
                     <img
                         src="images/story-anna.jpg"
@@ -54,6 +85,7 @@
                         sense of belonging through volunteering.”
                     </p>
                 </article>
+                <!-- 故事卡片2 -->
                 <article class="card">
                     <img
                         src="images/story-festival.jpg"
@@ -65,6 +97,7 @@
                         brought the community together!”
                     </p>
                 </article>
+                <!-- 故事卡片3 -->
                 <article class="card">
                     <img
                         src="images/story-david.jpg"
@@ -76,6 +109,52 @@
                         back. Now, I help others every week.”
                     </p>
                 </article>
+                <!-- 故事卡片4 -->
+                <article class="card">
+                    <img
+                        src="images/story-youth.jpg"
+                        alt="Young people at a coding workshop"
+                    />
+                    <h3>Inspiring Youth</h3>
+                    <p>
+                        “I never thought coding could be fun. Now, I’m helping
+                        others learn new skills and build their confidence!”
+                    </p>
+                </article>
+                <!-- 故事卡片5 -->
+                <article class="card">
+                    <img
+                        src="images/story-family.jpg"
+                        alt="Family enjoying outdoor games together"
+                    />
+                    <h3>Family Connections</h3>
+                    <p>
+                        “Our first Family Day Picnic was wonderful. We met
+                        neighbours and made new friends across cultures.”
+                    </p>
+                </article>
+                <!-- 故事卡片6 -->
+                <article class="card">
+                    <img
+                        src="images/story-seniors.jpg"
+                        alt="Elderly community members painting together"
+                    />
+                    <h3>Creativity at Any Age</h3>
+                    <p>
+                        “The arts workshop brought us joy and a sense of
+                        achievement. Age is no limit to learning and sharing!”
+                    </p>
+                </article>
+            </section>
+            <section class="feedback">
+                <div class="container">
+                    <h2 class="section-title">Your Story Matters!</h2>
+                    <p>
+                        <a class="button" href="contact.html" role="button">
+                            Share your story or suggest someone to feature
+                        </a>
+                    </p>
+                </div>
             </section>
         </main>
         <footer>
@@ -83,9 +162,12 @@
                 <p>
                     &copy; 2025 CCI Community Initiative. All rights reserved.
                 </p>
+                <p style="font-size: 0.93rem">
+                    This platform respects privacy and cultural diversity in all
+                    activities.
+                </p>
             </div>
         </footer>
         <script type="module" src="js/main.js"></script>
     </body>
 </html>
-[;'ghy']

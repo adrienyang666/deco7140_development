@@ -8,13 +8,94 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/contact.css" />
+        
+        <style>
+            .banner {
+                background: #e6f6ff;
+                border-radius: 1.3rem;
+                padding: 2rem 1.5rem;
+                text-align: center;
+                margin-bottom: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+                text-align: center;
+                margin-bottom: 1.5rem;
+                margin-top: 0;
+                letter-spacing: 0.01em;
+                color: #143768;
+            }
+            .contact-section {
+                max-width: 480px;
+                background: #fff;
+                border-radius: 1rem;
+                margin: 0 auto 2.5rem auto;
+                padding: 2.5rem 1.5rem 2rem 1.5rem;
+                box-shadow: 0 2px 8px #e6e9ef;
+            }
+            .contact-form label {
+                font-weight: bold;
+                display: block;
+                margin-top: 1.2em;
+                margin-bottom: 0.5em;
+            }
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                border-radius: 0.5em;
+                border: 1px solid #c2dae9;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+                margin-bottom: 0.2em;
+                box-sizing: border-box;
+                background: #f7f9fb;
+            }
+            .contact-form textarea {
+                resize: vertical;
+            }
+            .contact-form .button {
+                margin-top: 1.2em;
+                width: 100%;
+            }
+            .form-success,
+            .form-error {
+                margin-top: 1em;
+                padding: 0.7em 1em;
+                border-radius: 0.5em;
+                text-align: center;
+                font-size: 1rem;
+            }
+            .form-success {
+                background: #e6faea;
+                color: #217a3a;
+            }
+            .form-error {
+                background: #ffe9e6;
+                color: #e53935;
+            }
+            .contact-info {
+                margin-top: 2.5rem;
+                border-top: 1px solid #e2e7ef;
+                padding-top: 1.3rem;
+                color: #555;
+                font-size: 1rem;
+                text-align: center;
+            }
+            .contact-info a {
+                color: #2075d6;
+            }
+        </style>
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
-            <div class="container">
-                <h1 class="site-title">CCI Community Hub</h1>
+            <div class="container header-flex">
+                <div>
+                    <h1 class="site-title">CCI Community Hub</h1>
+                    <p class="site-tagline">
+                        Part of the Connect Communities Initiative
+                    </p>
+                </div>
                 <nav aria-label="Main navigation">
                     <ul class="nav-list">
                         <li><a href="index.html">Home</a></li>
@@ -31,11 +112,17 @@
                 </nav>
             </div>
         </header>
-        <main id="main-content">
+        <main id="main-content" class="container">
             <section class="banner">
-                <h2>Contact Us</h2>
+                <h2 class="section-title">Contact Us</h2>
                 <p>
-                    We're here to help! Fill out the form or email us directly.
+                    We're here to help! Send us your questions, suggestions, or
+                    stories using the form below.
+                    <br />
+                    <span style="font-size: 1rem; color: #2176ae">
+                        You can also email us at
+                        <a href="mailto:info@cci.org">info@cci.org</a>
+                    </span>
                 </p>
             </section>
             <section
@@ -71,13 +158,15 @@
                         rows="5"
                         required
                         aria-required="true"
+                        placeholder="Tell us your question, feedback, or share your story!"
                     ></textarea>
 
                     <button type="submit" class="button">Send Message</button>
+                    <div id="form-status"></div>
                 </form>
                 <div class="contact-info">
                     <p>
-                        Or email us:
+                        Or email us directly:
                         <a href="mailto:info@cci.org">info@cci.org</a>
                     </p>
                     <p>
@@ -103,6 +192,10 @@
             <div class="container">
                 <p>
                     &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+                <p style="font-size: 0.93rem">
+                    This platform respects privacy and cultural diversity in all
+                    activities.
                 </p>
             </div>
         </footer>

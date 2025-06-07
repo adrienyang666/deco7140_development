@@ -9,12 +9,34 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/events.css" />
+        <style>
+            .banner {
+                background: #e6f6ff;
+                border-radius: 1.3rem;
+                padding: 2rem 1.5rem;
+                text-align: center;
+                margin-bottom: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+                text-align: center;
+                margin-bottom: 1.5rem;
+                margin-top: 0;
+                letter-spacing: 0.01em;
+                color: #143768;
+            }
+        </style>
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <header>
-            <div class="container">
-                <h1 class="site-title">CCI Community Hub</h1>
+            <div class="container header-flex">
+                <div>
+                    <h1 class="site-title">CCI Community Hub</h1>
+                    <p class="site-tagline">
+                        Part of the Connect Communities Initiative
+                    </p>
+                </div>
                 <nav aria-label="Main navigation">
                     <ul class="nav-list">
                         <li><a href="index.html">Home</a></li>
@@ -29,45 +51,57 @@
                 </nav>
             </div>
         </header>
-        <main id="main-content">
+        <main id="main-content" class="container">
             <section class="banner">
-                <h2>Upcoming Events</h2>
+                <h2 class="section-title">Upcoming Events</h2>
                 <p>
                     Check out our latest events and get involved in building a
-                    vibrant community!
+                    vibrant, inclusive community!
+                    <br />
+                    <span style="font-size: 1rem; color: #2176ae">
+                        CCI welcomes all backgrounds and abilities—most events
+                        offer accessible venues and multilingual support.
+                    </span>
                 </p>
             </section>
-            <section class="events-list" aria-label="List of upcoming events">
+            <section
+                class="highlight-grid"
+                aria-label="List of upcoming events"
+            >
+                <!-- 卡片1 -->
                 <article class="card">
                     <img
-                        src="images/event-spring.jpg"
+                        src="images/event-spring.png"
                         alt="Dancers performing at Spring Festival"
                     />
                     <h3>Spring Festival Gathering</h3>
                     <p>
-                        Date: 10 June 2025<br />
+                        <strong>Date:</strong> 10 June 2025<br />
                         Join us for music, food, and fun—open to all ages. Free
-                        entry.
+                        entry. Accessible venue and translation available.
                     </p>
                     <a class="button" href="contact.html"
                         >RSVP for Spring Festival</a
                     >
                 </article>
+                <!-- 卡片2 -->
                 <article class="card">
                     <img
-                        src="images/event-volunteer.jpg"
+                        src="images/event-volunteer.png"
                         alt="Volunteers at a training workshop"
                     />
                     <h3>Volunteer Workshop</h3>
                     <p>
-                        Date: 25 June 2025<br />
+                        <strong>Date:</strong> 25 June 2025<br />
                         Hands-on training for new and returning volunteers.
-                        Learn skills, meet friends, and make a difference!
+                        Learn skills, meet friends, and make a difference! Light
+                        refreshments provided.
                     </p>
                     <a class="button" href="contact.html"
                         >Sign Up as Volunteer</a
                     >
                 </article>
+                <!-- 卡片3 -->
                 <article class="card">
                     <img
                         src="images/event-familyday.jpg"
@@ -75,20 +109,84 @@
                     />
                     <h3>Family Day Picnic</h3>
                     <p>
-                        Date: 5 July 2025<br />
+                        <strong>Date:</strong> 5 July 2025<br />
                         Bring your family for games, food, and activities at
-                        Riverside Park. All welcome!
+                        Riverside Park. All welcome! Playground and quiet zone
+                        available.
                     </p>
                     <a class="button" href="contact.html"
                         >Get Family Day Info</a
                     >
                 </article>
+                <!-- 卡片4：多元文化美食节 -->
+                <article class="card">
+                    <img
+                        src="images/event-kitchen.jpg"
+                        alt="Community members sharing multicultural foods"
+                    />
+                    <h3>Multicultural Kitchen Night</h3>
+                    <p>
+                        <strong>Date:</strong> 12 July 2025<br />
+                        Share and taste dishes from around the world. Bring a
+                        recipe and enjoy live music. Vegetarian options
+                        available.
+                    </p>
+                    <a class="button" href="contact.html">Join Kitchen Night</a>
+                </article>
+                <!-- 卡片5：语言交流角 -->
+                <article class="card">
+                    <img
+                        src="images/event-language.jpg"
+                        alt="People chatting at a language exchange table"
+                    />
+                    <h3>Language Exchange Meetup</h3>
+                    <p>
+                        <strong>Date:</strong> 19 July 2025<br />
+                        Practice English and other languages in a friendly
+                        group. Multilingual volunteers and resources provided.
+                    </p>
+                    <a class="button" href="contact.html"
+                        >Sign Up for Language Exchange</a
+                    >
+                </article>
+                <!-- 卡片6：长者艺术 -->
+                <article class="card">
+                    <img
+                        src="images/event-art.jpg"
+                        alt="Seniors painting and drawing together"
+                    />
+                    <h3>Seniors’ Arts Workshop</h3>
+                    <p>
+                        <strong>Date:</strong> 26 July 2025<br />
+                        Art and craft workshops for seniors—painting, sketching,
+                        and group projects. Wheelchair accessible.
+                    </p>
+                    <a class="button" href="contact.html"
+                        >RSVP for Arts Workshop</a
+                    >
+                </article>
+            </section>
+            <section class="feedback">
+                <div class="container">
+                    <h2 class="section-title">
+                        Can't find the event you need?
+                    </h2>
+                    <p>
+                        <a class="button" href="contact.html" role="button">
+                            Contact us for help or to suggest a new event
+                        </a>
+                    </p>
+                </div>
             </section>
         </main>
         <footer>
             <div class="container">
                 <p>
                     &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+                <p style="font-size: 0.93rem">
+                    This platform respects privacy and cultural diversity in all
+                    activities.
                 </p>
             </div>
         </footer>
