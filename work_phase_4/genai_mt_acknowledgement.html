@@ -1,194 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CCI Community Hub | GenAI & MT Acknowledgement</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/page_css/genai_mt_acknowledgement.css" />
-    <style>
-        .ack-banner {
-            background: linear-gradient(90deg, #e2f0fa 60%, #f9eec0 100%);
-            border-radius: 1.2rem;
-            margin: 2.5rem auto 2rem auto;
-            padding: 2rem 1.7rem 1.5rem 1.7rem;
-            max-width: 950px;
-            box-shadow: 0 4px 20px 0 rgba(34, 44, 84, 0.06);
-        }
-        .ack-title {
-            font-size: 2.1rem;
-            color: #143768;
-            margin-bottom: 1.2rem;
-            text-align: center;
-            letter-spacing: 0.03em;
-        }
-        .ack-section {
-            background: #fff;
-            border-radius: 1.2rem;
-            box-shadow: 0 2px 12px 0 rgba(34, 44, 84, 0.05);
-            margin-bottom: 2.5rem;
-            padding: 2rem 1.7rem 1.5rem 1.7rem;
-            border: 1px solid #e6ebf5;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .ack-section h2 {
-            font-size: 1.35rem;
-            color: #2075d6;
-            margin-bottom: 1.05rem;
-            letter-spacing: 0.02em;
-        }
-        .ack-section ul, .ack-section ol {
-            margin: 0 0 0.7em 1.3em;
-            padding: 0;
-        }
-        .ack-section ul li, .ack-section ol li {
-            margin-bottom: 0.7em;
-            line-height: 1.7;
-        }
-        .ack-section strong {
-            color: #143768;
-        }
-        .ack-reflection {
-            margin-bottom: 1.5rem;
-        }
-        .integrity-statement {
-            background: #f7f9fb;
-            border-left: 6px solid #2075d6;
-            padding: 1.1rem 1.5rem;
-            margin: 1.1rem 0 1.7rem 0;
-            font-size: 1.08rem;
-            border-radius: 0.7rem;
-        }
-        .tools-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fafafc;
-            margin-top: 1.3rem;
-            font-size: 1rem;
-        }
-        .tools-table th, .tools-table td {
-            border: 1px solid #d2e3f7;
-            padding: 0.7em 1em;
-            text-align: left;
-        }
-        .tools-table th {
-            background: #e9f3ff;
-            color: #143768;
-            font-weight: bold;
-        }
-        @media (max-width: 700px) {
-            .ack-banner,
-            .ack-section {
-                padding: 1.1rem 0.8rem;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CCI Community Hub | GenAI & MT Acknowledgement</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link
+            rel="stylesheet"
+            href="css/page_css/genai_mt_acknowledgement.css"
+        />
+        <style>
+            .ack-banner {
+                background: linear-gradient(90deg, #e2f0fa 60%, #f9eec0 100%);
+                border-radius: 1.2rem;
+                margin: 2.5rem auto 2rem auto;
+                padding: 2rem 1.7rem 1.5rem 1.7rem;
+                max-width: 950px;
+                box-shadow: 0 4px 20px 0 rgba(34, 44, 84, 0.06);
             }
             .ack-title {
-                font-size: 1.3rem;
+                font-size: 2.1rem;
+                color: #143768;
+                margin-bottom: 1.2rem;
+                text-align: center;
+                letter-spacing: 0.03em;
             }
-        }
-    </style>
-</head>
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header>
-        <div class="container">
-            <div>
-                <h1 class="site-title">CCI Community Hub</h1>
-                <p class="site-tagline" style="margin-top: -8px; color: #52796f">
-                    Part of the Connect Communities Initiative
+            .ack-section {
+                background: #fff;
+                border-radius: 1.2rem;
+                box-shadow: 0 2px 12px 0 rgba(34, 44, 84, 0.05);
+                margin-bottom: 2.5rem;
+                padding: 2rem 1.7rem 1.5rem 1.7rem;
+                border: 1px solid #e6ebf5;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .ack-section h2 {
+                font-size: 1.35rem;
+                color: #2075d6;
+                margin-bottom: 1.05rem;
+                letter-spacing: 0.02em;
+            }
+            .ack-section ul,
+            .ack-section ol {
+                margin: 0 0 0.7em 1.3em;
+                padding: 0;
+            }
+            .ack-section ul li,
+            .ack-section ol li {
+                margin-bottom: 0.7em;
+                line-height: 1.7;
+            }
+            .ack-section strong {
+                color: #143768;
+            }
+            .ack-reflection {
+                margin-bottom: 1.5rem;
+            }
+            .integrity-statement {
+                background: #f7f9fb;
+                border-left: 6px solid #2075d6;
+                padding: 1.1rem 1.5rem;
+                margin: 1.1rem 0 1.7rem 0;
+                font-size: 1.08rem;
+                border-radius: 0.7rem;
+            }
+            .tools-table {
+                width: 100%;
+                border-collapse: collapse;
+                background: #fafafc;
+                margin-top: 1.3rem;
+                font-size: 1rem;
+            }
+            .tools-table th,
+            .tools-table td {
+                border: 1px solid #d2e3f7;
+                padding: 0.7em 1em;
+                text-align: left;
+            }
+            .tools-table th {
+                background: #e9f3ff;
+                color: #143768;
+                font-weight: bold;
+            }
+            @media (max-width: 700px) {
+                .ack-banner,
+                .ack-section {
+                    padding: 1.1rem 0.8rem;
+                }
+                .ack-title {
+                    font-size: 1.3rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <header>
+            <div class="container">
+                <div>
+                    <h1 class="site-title">CCI Community Hub</h1>
+                    <p
+                        class="site-tagline"
+                        style="margin-top: -8px; color: #52796f"
+                    >
+                        Part of the Connect Communities Initiative
+                    </p>
+                </div>
+                <nav aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="genai_mt_acknowledgement.html"
+                                aria-current="page"
+                            >
+                                GenAI & MT Acknowledgement
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content">
+            <div class="ack-banner">
+                <h2 class="ack-title">
+                    GenAI & Machine Translation Acknowledgement
+                </h2>
+                <p style="font-size: 1.12rem; color: #143768">
+                    This page is required by the DECO7140 assessment to
+                    transparently document my use of Generative AI (GenAI) and
+                    Machine Translation (MT) tools, in line with
+                    <strong>UQ's GenAI/MT Usage Framework</strong> and course
+                    requirements. All major AI/MT use is declared below.
                 </p>
             </div>
-            <nav aria-label="Main navigation">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="stories.html">Stories</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="implementation_rationale.html">Implementation Rationale</a></li>
-                    <li>
-                        <a href="genai_mt_acknowledgement.html" aria-current="page">
-                            GenAI & MT Acknowledgement
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main id="main-content">
-        <div class="ack-banner">
-            <h2 class="ack-title">GenAI & Machine Translation Acknowledgement</h2>
-            <p style="font-size:1.12rem; color:#143768;">
-                This page documents my use of Generative AI (GenAI) and Machine Translation (MT) tools in the development of the CCI Community Hub project, in line with <strong>UQ's GenAI/MT Usage Framework</strong> and course requirements.
-            </p>
-        </div>
-        <section class="ack-section">
-            <h2>Reflection on GenAI/MT Use</h2>
-            <div class="ack-reflection">
-                <ol>
-                    <li>
-                        <strong>Why did I use GenAI or MT tools?</strong><br>
-                        I used GenAI (such as ChatGPT and Copilot) primarily to generate creative ideas, rephrase English instructions, draft sample code, and help with bilingual communication (English–Chinese) for clarity and accessibility. These tools enhanced my productivity and creativity, especially for brainstorming and refining user-facing content.
-                    </li>
-                    <li>
-                        <strong>How did I ensure academic integrity?</strong><br>
-                        I critically reviewed, edited, and verified all GenAI/MT outputs. I ensured that no assessment answers, code, or design elements were directly copied without modification. All AI-generated content was validated against course requirements, ensuring originality and alignment with assignment instructions.
-                    </li>
-                    <li>
-                        <strong>Ethical and responsible use:</strong><br>
-                        I used GenAI/MT as a support tool rather than a replacement for my own critical thinking. All content and code were subject to my own quality assurance. I avoided using GenAI/MT for any restricted tasks (e.g., direct plagiarism or assessment loopholes), following both UQ and course guidelines.
-                    </li>
-                </ol>
+            <section class="ack-section">
+                <h2>Reflection on GenAI/MT Use</h2>
+                <div class="ack-reflection">
+                    <ol>
+                        <li>
+                            <strong>Why did I use GenAI or MT tools?</strong
+                            ><br />
+                            I used GenAI (such as ChatGPT and Copilot) to
+                            enhance productivity, brainstorm creative ideas,
+                            draft and refine English instructions, generate
+                            sample code, and support bilingual communication
+                            (English–Chinese) for clarity and accessibility.
+                            These tools were especially helpful for ideation,
+                            language clarity, and code prototyping.
+                        </li>
+                        <li>
+                            <strong>How did I ensure academic integrity?</strong
+                            ><br />
+                            I critically reviewed, edited, and verified all
+                            GenAI/MT outputs. No assessment answer, code, or
+                            design was directly copied; all AI-generated content
+                            was carefully validated and substantially rewritten
+                            to match assignment requirements and maintain
+                            originality.
+                        </li>
+                        <li>
+                            <strong>Ethical and responsible use:</strong><br />
+                            I used GenAI/MT strictly as a support tool, not a
+                            replacement for my own thinking. All code and
+                            content were subject to my own quality control. I
+                            avoided using GenAI/MT for restricted or prohibited
+                            tasks, following both UQ and course policies.
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section class="ack-section">
+                <h2>GenAI & MT Tools Used</h2>
+                <table class="tools-table">
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>How It Was Used</th>
+                            <th>Where in the Project</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ChatGPT (OpenAI)</td>
+                            <td>
+                                Brainstorming design ideas, drafting/refining
+                                English text, generating sample code and
+                                accessibility suggestions, bilingual translation
+                                and proofreading
+                            </td>
+                            <td>
+                                Content and code drafts, accessibility and
+                                language checks on all pages
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Copilot (GitHub)</td>
+                            <td>
+                                Code auto-completion and structure suggestions
+                                for HTML, CSS, JS
+                            </td>
+                            <td>JavaScript modules, CSS/HTML refactoring</td>
+                        </tr>
+                        <tr>
+                            <td>DeepL / Google Translate</td>
+                            <td>
+                                Initial machine translation for bilingual
+                                content, always followed by manual editing for
+                                clarity and accuracy
+                            </td>
+                            <td>
+                                Bilingual explanations, page drafts, project
+                                documentation
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>DALL·E (OpenAI) / Other Image AI</td>
+                            <td>
+                                Generated comic-style illustrations for
+                                community events, team, and stories; all images
+                                reviewed and described with alt text for
+                                accessibility
+                            </td>
+                            <td>
+                                Homepage highlight cards, team poster,
+                                directory/events images, story illustrations
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size: 0.97em; color: #585858; margin-top: 0.8em">
+                    All images on this website were generated using GenAI tools
+                    and have been reviewed for appropriateness, accessibility,
+                    and inclusivity.
+                </p>
+            </section>
+            <section class="ack-section">
+                <h2>Integrity Statement</h2>
+                <div class="integrity-statement">
+                    I confirm that I have used GenAI and MT tools in accordance
+                    with UQ’s GenAI and MT Usage Framework. All AI/MT outputs
+                    have been critically reviewed, substantially modified, and
+                    integrated into my own work. No GenAI/MT outputs have been
+                    submitted as-is for assessment. The intellectual work,
+                    design, and academic integrity of this submission are my own
+                    responsibility.
+                </div>
+            </section>
+            
+        </main>
+        <footer>
+            <div class="container">
+                <p>
+                    &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
             </div>
-        </section>
-        <section class="ack-section">
-            <h2>GenAI & MT Tools Used</h2>
-            <table class="tools-table">
-                <thead>
-                    <tr>
-                        <th>Tool</th>
-                        <th>How It Was Used</th>
-                        <th>Where in the Project</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ChatGPT (OpenAI)</td>
-                        <td>Brainstorming design ideas, drafting/refining English text, generating sample code and accessibility suggestions, bilingual translation and proofreading</td>
-                        <td>All pages (concepts, text drafts, accessibility)</td>
-                    </tr>
-                    <tr>
-                        <td>Copilot (GitHub)</td>
-                        <td>Code auto-completion and structure suggestions</td>
-                        <td>JavaScript modules, CSS organization</td>
-                    </tr>
-                    <tr>
-                        <td>DeepL/Google Translate</td>
-                        <td>Initial machine translation of text (followed by manual editing for clarity and accuracy)</td>
-                        <td>Bilingual explanations and page drafts</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="ack-section">
-            <h2>Integrity Statement</h2>
-            <div class="integrity-statement">
-                I confirm that I have used GenAI and MT tools in accordance with UQ’s GenAI and MT Usage Framework. All AI/MT outputs have been critically reviewed, substantially modified, and integrated into my own work. No GenAI/MT outputs have been submitted as-is for assessment. The intellectual work, design, and academic integrity of this submission are my own responsibility.
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>
-                &copy; 2025 CCI Community Initiative. All rights reserved.
-            </p>
-        </div>
-    </footer>
-    <script type="module" src="js/main.js"></script>
-</body>
+        </footer>
+        <script type="module" src="js/main.js"></script>
+    </body>
 </html>

@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/index.css" />
         <style>
-            /* Accessibility focus style for skip link and navigation */
             .skip-link {
                 position: absolute;
                 left: -999px;
@@ -20,7 +19,7 @@
                 overflow: hidden;
                 z-index: 1000;
                 background: #ffe066;
-                color: #143768; /* 提高对比度 */
+                color: #143768;
                 font-weight: bold;
                 padding: 8px 18px;
                 border-radius: 8px;
@@ -37,41 +36,44 @@
             .button:focus-visible {
                 outline: 2.5px solid #2075d6;
                 outline-offset: 3px;
-                /* 显著的键盘焦点指示 */
+                box-shadow: 0 0 0 3px #ffe066;
+                background: #fffde7;
+            }
+            .button:hover,
+            .button:active {
+                background: #2075d6;
+                color: #fff;
+                text-decoration: underline;
             }
             footer {
                 background: #f7f9fb;
                 border-top: 1.5px solid #e3ebf5;
-                color: #143768; /* 对比度增强 */
+                color: #143768;
                 padding-top: 1.1em;
             }
             footer p {
-                color: #143768; /* 提高对比度，合规 */
+                color: #143768;
                 margin-bottom: 0.25em;
             }
             .site-tagline {
-                color: #286453 !important; /* 原 #52796f 太浅，增强对比度 */
+                color: #286453 !important;
             }
             .highlight-grid .card h3,
             .highlight-grid .card p {
                 color: #143768;
             }
-            /* 对于主要内容区域，主文本颜色使用高对比深色 */
             body,
             main,
             .container {
                 color: #143768;
             }
-            /* 保证所有按钮都有可见聚焦 */
             .button:focus-visible {
                 box-shadow: 0 0 0 3px #ffe066;
             }
-            /* 确保主要文本区域与背景对比充足 */
             main,
             .card {
                 background: #fff;
             }
-            /* 保证图片无多余aria标签，仅用alt即可 */
         </style>
     </head>
     <body>
@@ -94,11 +96,15 @@
                         <li><a href="stories.html">Stories</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="implementation_rationale.html">Implementation Rationale</a></li>
+                        <li>
+                            <a href="implementation_rationale.html"
+                                >Implementation Rationale</a
+                            >
+                        </li>
                         <li>
                             <a href="genai_mt_acknowledgement.html">
-                                GenAI & MT Acknowledgement</a
-                            >
+                                GenAI & MT Acknowledgement
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -149,10 +155,7 @@
                     <h2 class="section-title">Our Highlights</h2>
                     <div class="highlight-grid">
                         <!-- 卡片1 -->
-                        <div
-                            class="card"
-                            aria-label="Highlight: Spring Festival"
-                        >
+                        <div class="card">
                             <img
                                 src="images/spring.png"
                                 alt="Community members celebrating Spring Festival"
@@ -171,10 +174,7 @@
                             >
                         </div>
                         <!-- 卡片2 -->
-                        <div
-                            class="card"
-                            aria-label="Highlight: Volunteer Workshops"
-                        >
+                        <div class="card">
                             <img
                                 src="images/commu.png"
                                 alt="Volunteers collaborating at a workshop"
@@ -193,10 +193,7 @@
                             >
                         </div>
                         <!-- 卡片3 -->
-                        <div
-                            class="card"
-                            aria-label="Highlight: Local Support Services"
-                        >
+                        <div class="card">
                             <img
                                 src="images/support.png"
                                 alt="People talking to a counselor"
@@ -216,10 +213,7 @@
                             >
                         </div>
                         <!-- 卡片4 -->
-                        <div
-                            class="card"
-                            aria-label="Highlight: Youth Activities"
-                        >
+                        <div class="card">
                             <img
                                 src="images/youth.png"
                                 alt="Teens in a coding workshop"
@@ -238,10 +232,7 @@
                             >
                         </div>
                         <!-- 卡片5 -->
-                        <div
-                            class="card"
-                            aria-label="Highlight: Green Community Initiative"
-                        >
+                        <div class="card">
                             <img
                                 src="images/green.png"
                                 alt="Volunteers planting trees"
@@ -260,10 +251,7 @@
                             >
                         </div>
                         <!-- 卡片6 -->
-                        <div
-                            class="card"
-                            aria-label="Highlight: Multicultural Kitchen"
-                        >
+                        <div class="card">
                             <img
                                 src="images/kitchen.png"
                                 alt="People sharing diverse foods"
