@@ -1,0 +1,94 @@
+.rationale-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 3rem auto 3rem auto;
+    padding: 0 1rem;
+}
+@media (max-width: 900px) {
+    .rationale-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+.rationale-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px 0 rgba(34, 44, 84, 0.08);
+    padding: 2rem 1.7rem 1.7rem 1.7rem;
+    border: 1px solid #e6ebf5;
+    transition: box-shadow 0.2s;
+}
+.rationale-card h3 {
+    font-size: 1.35rem;
+    color: #143768;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.01em;
+    border-bottom: 2px solid #f2f5fa;
+    padding-bottom: 0.4rem;
+}
+.rationale-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem 2.5rem;
+    margin-bottom: 0;
+}
+@media (max-width: 900px) {
+    .rationale-columns {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}
+.rationale-section {
+    margin-bottom: 1.8rem;
+}
+.rationale-section strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.35em;
+    color: #143768;
+}
+.rationale-section ul {
+    margin: 0 0 0.5em 1.3em;
+    padding: 0;
+}
+.rationale-section ul li {
+    margin-bottom: 0.7em;
+    line-height: 1.7;
+}
+.rationale-card .github-link {
+    margin-top: 1.3rem;
+    display: block;
+    font-weight: bold;
+    color: #2075d6;
+    word-break: break-all;
+}
+.accessibility-card {
+    margin-top: 2.5rem;
+    background: #f7f9fb;
+    border: 1.5px solid #d2e3f7;
+}
+.accessibility-card h3 {
+    border-bottom: none;
+    color: #2075d6;
+}
+.accessibility-audit-images {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 1.5rem 0;
+}
+.accessibility-audit-images img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 0.7rem;
+    border: 1px solid #c8d5e8;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(34, 44, 84, 0.06);
+}
+.reflection-list {
+    margin-left: 1.4em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}

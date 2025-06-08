@@ -20,7 +20,7 @@
                 overflow: hidden;
                 z-index: 1000;
                 background: #ffe066;
-                color: #333;
+                color: #143768; /* 提高对比度 */
                 font-weight: bold;
                 padding: 8px 18px;
                 border-radius: 8px;
@@ -35,9 +35,43 @@
             }
             a:focus-visible,
             .button:focus-visible {
-                outline: 2px solid #2574a9;
-                outline-offset: 2px;
+                outline: 2.5px solid #2075d6;
+                outline-offset: 3px;
+                /* 显著的键盘焦点指示 */
             }
+            footer {
+                background: #f7f9fb;
+                border-top: 1.5px solid #e3ebf5;
+                color: #143768; /* 对比度增强 */
+                padding-top: 1.1em;
+            }
+            footer p {
+                color: #143768; /* 提高对比度，合规 */
+                margin-bottom: 0.25em;
+            }
+            .site-tagline {
+                color: #286453 !important; /* 原 #52796f 太浅，增强对比度 */
+            }
+            .highlight-grid .card h3,
+            .highlight-grid .card p {
+                color: #143768;
+            }
+            /* 对于主要内容区域，主文本颜色使用高对比深色 */
+            body,
+            main,
+            .container {
+                color: #143768;
+            }
+            /* 保证所有按钮都有可见聚焦 */
+            .button:focus-visible {
+                box-shadow: 0 0 0 3px #ffe066;
+            }
+            /* 确保主要文本区域与背景对比充足 */
+            main,
+            .card {
+                background: #fff;
+            }
+            /* 保证图片无多余aria标签，仅用alt即可 */
         </style>
     </head>
     <body>
@@ -45,11 +79,8 @@
         <header>
             <div class="container">
                 <div>
-                    <h1 class="site-title">Community Hub</h1>
-                    <p
-                        class="site-tagline"
-                        style="margin-top: -8px; color: #52796f"
-                    >
+                    <h1 class="site-title">CCI Community Hub</h1>
+                    <p class="site-tagline" style="margin-top: -8px">
                         Part of the Connect Communities Initiative
                     </p>
                 </div>
@@ -63,6 +94,12 @@
                         <li><a href="stories.html">Stories</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="implementation_rationale.html">Implementation Rationale</a></li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html">
+                                GenAI & MT Acknowledgement</a
+                            >
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -78,9 +115,9 @@
                         We are dedicated to fostering
                         <strong>meaningful connections</strong> for everyone in
                         our diverse community, supporting
-                        <strong
-                            >youth, seniors, migrants, and all who call this
-                            place home</strong
+                        <strong>
+                            youth, seniors, migrants, and all who call this
+                            place home </strong
                         >.
                     </span>
                 </p>

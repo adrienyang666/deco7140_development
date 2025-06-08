@@ -2,7 +2,7 @@
 
 import { initNavHighlight } from "./modules/nav.js";
 import { initDirectoryFilter } from "./modules/filter.js";
-import { initContactForm } from "./modules/form.js";
+// 你可以把Contact的API提交也写成模块放modules/form.js，这里为了方便合并演示
 
 // 全局初始化
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,81 +12,79 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.body.contains(document.querySelector(".directory-list"))) {
         initDirectoryFilter();
     }
-    if (document.body.contains(document.querySelector(".contact-form"))) {
-        initContactForm();
-    }
-    // 以后如果加其他页面，也可以在这里判断并加载
-});
-// 社区目录筛选功能
-document.addEventListener("DOMContentLoaded", function () {
-    const filter = document.getElementById("category");
-    const cards = document.querySelectorAll(
-        ".directory-list .card, .highlight-grid .card, section .card"
-    );
 
-    filter.addEventListener("change", function () {
-        const value = filter.value;
-        cards.forEach((card) => {
-            if (value === "all" || card.dataset.category === value) {
-                card.style.display = "";
-            } else {
-                card.style.display = "none";
+    // Contact表单API提交
+    const form = document.querySelector(".contact-form");
+    if (form) {
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const status = document.getElementById("form-status");
+            status.innerHTML = "";
+            const data = {
+                name: form.name.value.trim(),
+                email: form.email.value.trim(),
+                message: form.message.value.trim(),
+            };
+            if (!data.name || !data.email || !data.message) {
+                status.innerHTML =
+                    '<div class="form-error">Please fill in all fields.</div>';
+                return;
+            }
+            try {
+                const studentNumber = "s4893955"; // 你的真实学号
+                const uqcloudZoneId = "cd947b62"; // 你的真实zone id
+
+                const response = await fetch(
+                    "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            student_number: studentNumber,
+                            uqcloud_zone_id: uqcloudZoneId,
+                        },
+                        body: JSON.stringify(data),
+                    }
+                );
+                const resData = await response.json();
+                const isSuccess = response.ok || resData.status === "success";
+
+                if (isSuccess) {
+                    status.innerHTML =
+                        '<div class="form-success">Thank you! Your message has been received.</div>';
+                    form.reset();
+                } else if (
+                    resData.message ===
+                    "This email has already joined the community."
+                ) {
+                    status.innerHTML =
+                        '<div class="form-error">This email has already joined the community. Please use another email.</div>';
+                } else {
+                    status.innerHTML =
+                        '<div class="form-error">Sorry, something went wrong. Please try again later.</div>';
+                }
+            } catch (err) {
+                status.innerHTML =
+                    '<div class="form-error">Could not connect to the server.</div>';
             }
         });
-    });
-});
-// 放到js/main.js或js/contact.js里
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".contact-form");
-    if (!form) return;
+    }
 
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        const status = document.getElementById("form-status");
-        status.innerHTML = "";
-        // 收集数据
-        const data = {
-            name: form.name.value.trim(),
-            email: form.email.value.trim(),
-            message: form.message.value.trim(),
-        };
-
-        // 简单校验
-        if (!data.name || !data.email || !data.message) {
-            status.innerHTML =
-                '<div class="form-error">Please fill in all fields.</div>';
-            return;
-        }
-
-        try {
-            // 修改下面两项为你的真实学号和zone id
-            const studentNumber = "s4893955"; // 改为你自己的
-            const uqcloudZoneId = "cd947b62"; // 改为你自己的
-
-            const response = await fetch(
-                "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        student_number: studentNumber,
-                        uqcloud_zone_id: uqcloudZoneId,
-                    },
-                    body: JSON.stringify(data),
+    // 目录筛选功能 (如果只在某页需要，可合并到filter.js)
+    const filter = document.getElementById("category");
+    if (filter) {
+        const cards = document.querySelectorAll(
+            ".directory-list .card, .highlight-grid .card, section .card"
+        );
+        filter.addEventListener("change", function () {
+            const value = filter.value;
+            cards.forEach((card) => {
+                if (value === "all" || card.dataset.category === value) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
                 }
-            );
-
-            if (response.ok) {
-                status.innerHTML =
-                    '<div class="form-success">Thank you! Your message has been received.</div>';
-                form.reset();
-            } else {
-                status.innerHTML =
-                    '<div class="form-error">Sorry, something went wrong. Please try again later.</div>';
-            }
-        } catch (err) {
-            status.innerHTML =
-                '<div class="form-error">Could not connect to the server.</div>';
-        }
-    });
+            });
+        });
+    }
 });

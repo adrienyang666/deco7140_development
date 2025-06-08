@@ -150,3 +150,145 @@ button:focus,
   letter-spacing: 0.01em;
   color: #143768;
 }
+.rationale-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 3rem auto 3rem auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 900px) {
+    .rationale-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.rationale-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px 0 rgba(34, 44, 84, 0.08);
+    padding: 2rem 1.7rem 1.7rem 1.7rem;
+    border: 1px solid #e6ebf5;
+    transition: box-shadow 0.2s;
+}
+
+.rationale-card h3 {
+    font-size: 1.35rem;
+    color: #143768;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.01em;
+    border-bottom: 2px solid #f2f5fa;
+    padding-bottom: 0.4rem;
+}
+
+.rationale-card ul {
+    margin-left: 1.1em;
+    margin-bottom: 1.1em;
+}
+
+.rationale-card ul li {
+    margin-bottom: 0.7em;
+    line-height: 1.7;
+}
+.rationale-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 3rem auto 3rem auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 900px) {
+    .rationale-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.rationale-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px 0 rgba(34, 44, 84, 0.08);
+    padding: 2rem 1.7rem 1.7rem 1.7rem;
+    border: 1px solid #e6ebf5;
+    transition: box-shadow 0.2s;
+}
+
+.rationale-card h3 {
+    font-size: 1.35rem;
+    color: #143768;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.01em;
+    border-bottom: 2px solid #f2f5fa;
+    padding-bottom: 0.4rem;
+}
+
+.rationale-card ul {
+    margin-left: 1.1em;
+    margin-bottom: 1.1em;
+}
+
+.rationale-card ul li {
+    margin-bottom: 0.7em;
+    line-height: 1.7;
+}
+.rationale-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 2rem 2rem;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px; /* 你可以根据实际内容微调，比如280-380px */
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px 0 rgba(34, 44, 84, 0.05);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border: 1px solid #e6ebf5;
+  justify-content: flex-start;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.15rem;
+  color: #2075d6;
+}
+
+.card .reflection-list, .card ul {
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.card .github-link {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 0.97rem;
+  word-break: break-all;
+}
+
+.accessibility-card {
+  grid-column: span 2; /* 让无障碍卡片横跨两列 */
+  min-height: 340px;
+}
+
+.accessibility-audit-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+.accessibility-audit-images img {
+  max-width: 170px;
+  border-radius: 0.5rem;
+  background: #f6f7fa;
+  border: 1px solid #e3ebf5;
+  box-shadow: 0 0 4px rgba(50, 60, 80, 0.03);
+}

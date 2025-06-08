@@ -130,3 +130,24 @@ a:focus-visible, .button:focus-visible {
 .home-highlights {
   padding: 0 0 2.5rem 0; /* 或更大留白，看你风格 */
 }
+.quick-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;      /* 垂直居中（对li高度生效） */
+    gap: 1.5rem;              /* 按钮间隔 */
+    padding: 0;
+    margin: 0 auto 2.5rem auto;  /* 居中和下方留白 */
+    list-style: none;
+    flex-wrap: wrap;          /* 移动端可自动换行 */
+}
+.quick-links li {
+    margin: 0;
+    padding: 0;
+}
+.quick-links .button {
+    min-width: 200px;
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 0.75em 1.8em;
+}

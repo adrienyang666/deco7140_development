@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CCI Community Hub | Implementation Rationale</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link
+            rel="stylesheet"
+            href="css/page_css/implementation_rationale.css"
+        />
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <header>
+            <div class="container">
+                <div>
+                    <h1 class="site-title">CCI Community Hub</h1>
+                    <p
+                        class="site-tagline"
+                        style="margin-top: -8px; color: #52796f"
+                    >
+                        Part of the Connect Communities Initiative
+                    </p>
+                </div>
+                <nav aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <a
+                                href="implementation_rationale.html"
+                                aria-current="page"
+                            >
+                                Implementation Rationale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html">
+                                GenAI & MT Acknowledgement
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content">
+            <section class="banner">
+                <h2>Implementation Rationale</h2>
+                <p>
+                    A detailed explanation of the key design and technical
+                    decisions behind the CCI Community Hub website, aligned with
+                    the course criteria and ethical standards.
+                </p>
+            </section>
+
+            <div class="rationale-grid">
+                <article class="card rationale-card">
+                    <h3>Overview</h3>
+                    <p>
+                        The CCI Community Hub was developed with a strong
+                        emphasis on accessibility, user experience, and
+                        responsible integration of dynamic content. Every
+                        decision—design, technical, or ethical—was made to
+                        closely align with course requirements, industry
+                        standards, and the genuine needs of a diverse community.
+                    </p>
+                    <!-- GitHub链接加在第一卡片或最底部都可以 -->
+                    <a
+                        class="github-link"
+                        href="https://github.com/adrienyang666/deco7140_development"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        GitHub Repository:
+                        https://github.com/adrienyang666/deco7140_development
+                    </a>
+                </article>
+
+                <article class="card rationale-card">
+                    <h3>Key Design & Implementation Decisions</h3>
+                    <div class="rationale-columns">
+                        <div class="rationale-section">
+                            <strong>Page Structure and Navigation:</strong>
+                            <ul>
+                                <li>
+                                    Six core pages, logical grouping and
+                                    navigation.
+                                </li>
+                                <li>
+                                    Modular nav for consistency and
+                                    accessibility.
+                                </li>
+                            </ul>
+                            <strong>Accessibility and Inclusivity:</strong>
+                            <ul>
+                                <li>
+                                    Clear labels, alt text, WCAG 2.2 compliant.
+                                </li>
+                                <li>Semantic HTML for screen readers.</li>
+                            </ul>
+                            <strong>Visual Design and Consistency:</strong>
+                            <ul>
+                                <li>
+                                    Standardized modular CSS for a unified look.
+                                </li>
+                                <li>Responsive via flexbox & media queries.</li>
+                            </ul>
+                        </div>
+                        <div class="rationale-section">
+                            <strong
+                                >Dynamic Content and API Integration:</strong
+                            >
+                            <ul>
+                                <li>
+                                    Contact page API (POST, custom headers).
+                                </li>
+                                <li>User feedback for submission/errors.</li>
+                                <li>Directory filtering via JavaScript.</li>
+                            </ul>
+                            <strong>Code Quality and Structure:</strong>
+                            <ul>
+                                <li>Modular JS for clarity and performance.</li>
+                                <li>GitHub version control, clear commits.</li>
+                            </ul>
+                            <strong>Ethics and Cultural Sensitivity:</strong>
+                            <ul>
+                                <li>Diverse, positive imagery and content.</li>
+                                <li>
+                                    GenAI tools used responsibly with human
+                                    review.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card rationale-card">
+                    <h3>Alignment with Course Criteria</h3>
+                    <ul>
+                        <li>
+                            All design and implementation choices directly
+                            address the grading rubric.
+                        </li>
+                        <li>
+                            Dynamic content is delivered via secure and
+                            compliant API use.
+                        </li>
+                        <li>
+                            Accessibility, ethical design, and user needs are
+                            prioritized throughout.
+                        </li>
+                        <li>
+                            Code structure and site organization reflect best
+                            web practices.
+                        </li>
+                    </ul>
+                    <p>
+                        In summary, the CCI Community Hub demonstrates a
+                        professional approach to web development, balancing
+                        technical excellence, inclusivity, accessibility, and
+                        ethical responsibility.
+                    </p>
+                </article>
+            </div>
+
+            <!-- Accessibility Audit 卡片区块 -->
+            <article
+                class="card rationale-card accessibility-card"
+                aria-labelledby="accessibility-audit"
+            >
+                <h3 id="accessibility-audit">
+                    Accessibility Audit & Reflection
+                </h3>
+                <div class="accessibility-audit-images">
+                    <!-- 替换为你的实际审查截图 -->
+                    <img
+                        src="images/accessibility-audit-1.png"
+                        alt="Accessibility audit screenshot 1: Home page Lighthouse report"
+                    />
+                    <img
+                        src="images/accessibility-audit-2.png"
+                        alt="Accessibility audit screenshot 2: Directory page Lighthouse report"
+                    />
+                </div>
+                <strong>Reflection:</strong>
+                <ul class="reflection-list">
+                    <li>
+                        Most pages scored above 85% on the Lighthouse
+                        accessibility audit, but a few issues were identified
+                        and addressed during development.
+                    </li>
+                    <li>
+                        All interactive elements are now accessible and operable
+                        by keyboard, though initially some custom components
+                        needed improved focus styling.
+                    </li>
+                    <li>
+                        ARIA labels and alt text were reviewed—some ARIA misuse
+                        (such as aria-label on non-landmark elements) was fixed
+                        based on audit feedback.
+                    </li>
+                    <li>
+                        Several text and background color pairs needed contrast
+                        adjustments to fully meet WCAG 2.2 AA standards.
+                    </li>
+                    <li>
+                        Several text and background color pairs needed contrast
+                        adjustments to fully meet WCAG 2.2 AA standards.
+                    </li>
+                </ul>
+            </article>
+        </main>
+        <footer>
+            <div class="container">
+                <p>
+                    &copy; 2025 CCI Community Initiative. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
